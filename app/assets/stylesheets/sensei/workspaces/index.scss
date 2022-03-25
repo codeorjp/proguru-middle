@@ -1,0 +1,45 @@
+@import "../../variables";
+
+.workspaceList {
+  margin-bottom: 40px;
+  &__title {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $gray-1;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-left: 10px;
+    p {
+      margin: 0 0 4px;
+    }
+  }
+  &__items {
+    display: flex;
+  }
+  &__item {
+    padding: 10px 20px;
+    background: $gray-1;
+    border-radius: 100px;
+    margin-right: 10px;
+    color: $black-2;
+    &.-active {
+      background: $main-color;
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        background: #005aea;
+      }
+    }
+    .subtext {
+      display: block;
+      font-size: 10px;
+    }
+  }
+  &__lessonNum {
+    color: $black-3;
+  }
+  &__lessonTitle {
+    font-size: 20px;
+  }
+}

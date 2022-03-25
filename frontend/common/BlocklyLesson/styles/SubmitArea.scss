@@ -1,0 +1,53 @@
+.submitArea {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #dedede;
+  padding: 20px 0 0;
+  margin: 20px 0 0;
+  & > * {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.imageSelectButton {
+  background: #E3F2FF;
+  border: 0;
+  outline: 0;
+  padding: 10px 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.buttonIcon {
+  font-size: 16px;
+  color: #0b77d4;
+}
+
+.inputWrap {
+  width: 100%;
+  flex: 1;
+}
+
+.input {
+  min-width: 200px; 
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.submitButtonWrap {
+  width: 140px;
+}
+
+.submitButton {
+  background: #dedede;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,36 @@
+.navigator {
+  height: 40px;
+  background-color: #eee;
+  color: #000;
+  overflow-y: hidden;
+  user-select: none;
+  float: left;
+}
+
+.toolbox {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: 30px;
+  line-height: 30px;
+  border-right: 1px solid gray;
+  float: left;
+}
+
+.workspace {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: 30px;
+  width: 160px;
+  line-height: 30px;
+}
+
+.blocklyWrapper {
+  height: 100%;
+  position: relative;
+}
+
+.blocklyDiv {
+  position: absolute;
+}

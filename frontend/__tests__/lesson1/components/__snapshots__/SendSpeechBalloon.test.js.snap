@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Send Speech Balloon render SendSpeechBalloon 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "16px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set background: #00ff00 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "#00ff00",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "16px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set border-radius: 30px 0px 30px 30px 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "16px",
+          "padding": "30px 0px 30px 30px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set color: #ff0000 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#ff0000",
+          "fontSize": "16px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set font-size: 20px 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "20px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set padding: 10px 10px 10px 10px 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "16px",
+          "padding": "10px 10px 10px 10px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set send speech text 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "16px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <p>
+        こんにちは，僕の名前は生徒1です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`Send Speech Balloon set text-align: left 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    美咲
+  </p>
+  <div
+    className="undefined undefined"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      style={
+        Object {
+          "background": "",
+          "borderRadius": "",
+          "color": "#000",
+          "fontSize": "16px",
+          "textAlign": "left",
+        }
+      }
+    >
+      <p>
+        こんにちは，私の名前は美咲です。
+      </p>
+    </div>
+    <div
+      className="
+                undefined
+                null
+                undefined
+              "
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    />
+  </div>
+</div>
+`;

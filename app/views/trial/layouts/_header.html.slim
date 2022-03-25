@@ -1,0 +1,6 @@
+header#header
+  .header-wrapper
+    .header-wrapper__logoArea
+      p
+        = link_to image_tag("logo.png", height: "40px", class: "", alt: "プログル"), (current_page? trial_index_path) ? root_path : trial_index_path
+      p.header-wrapper__detail お試しレッスン

@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/kaniko-project/executor'
+    args: ['--destination=asia.gcr.io/proguru-middle/${_SERVICE_NAME}', '--cache=true', '--build-arg=RAILS_ENV=${_RAILS_ENV}', '--build-arg=WEB_HOST=${_WEB_HOST}', '--build-arg=RAILS_MASTER_KEY=${_RAILS_MASTER_KEY}']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args: ['beta', 'run', 'deploy', '${_SERVICE_NAME}', '--image', 'asia.gcr.io/proguru-middle/${_SERVICE_NAME}', '--cpu', '${_CPU}', '--memory', '${_MEMORY}', '--min-instances', '${_MIN_INSTANCES}', '--set-env-vars', 'WEB_CONCURRENCY=${_WEB_CONCURRENCY}', '--region', 'asia-northeast1', '--platform', 'managed', '--allow-unauthenticated', '--add-cloudsql-instances', 'proguru-middle:asia-northeast1:${_SERVICE_NAME}']
+options:
+  machineType: 'N1_HIGHCPU_8'

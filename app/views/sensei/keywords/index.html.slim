@@ -1,0 +1,8 @@
+.container__main
+  .container-inner
+    div
+      h2.h2-title
+        .h2-title__text.class-item 出席番号 #{@student.number}番 #{@student.nickname} さんの設定キーワード一覧
+      ul
+        - @keywords.each do |keyword|
+          li #{keyword.content}

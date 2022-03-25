@@ -1,0 +1,40 @@
+.TableTopButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.BtnDanger {
+  border: 1px solid #f44336;
+  background-color: white;
+  color: red;
+  display: inline-block;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.BtnDanger:hover {
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+}
+
+.BtnDanger:focus {
+  outline: none;
+}
+
+.BtnDanger:disabled {
+  opacity: 0.3;
+  background-color: white;
+  color: red;
+  cursor: not-allowed;
+}
+
+.NoMessage {
+  text-align: center;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+}

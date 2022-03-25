@@ -1,0 +1,91 @@
+.app-table {
+  width: 100%;
+  &__head {
+    background: #f5f5f5;
+    th {
+      padding: 20px 10px;
+      text-align: center;
+    }
+  }
+  &__body {
+    text-align: center;
+    td {
+      padding: 10px;
+    }
+    .content {
+      width: 400px;
+    }
+  }
+  .app-table-body {
+    &__password {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__icon-lock-link {
+      text-decoration: none;
+    }
+    &__icon-lock {
+      font-size: 26px;
+      color: #b9b9b9;
+      transition: all 0.1s linear;
+      padding: 4px 6px;
+      &.-lock {
+        color: #c63148;
+      }
+      &.-unlock {
+        color: #3eb321;
+      }
+    }
+    &__button {
+      line-height: 0;
+      width: 110px;
+      padding: 16px 0;
+    }
+  }
+}
+
+.icon-btn {
+  a {
+    font-size: 26px;
+    color: #b9b9b9;
+    text-decoration: none;
+    background: #fff;
+    transition: all 0.1s linear;
+    padding: 4px 6px;
+    &:hover {
+      color: #fff;
+      background: #b9b9b9;
+      border-radius: 100px;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 26px;
+    color: #b9b9b9;
+    text-decoration: none;
+    transition: all 0.1s linear;
+    padding: 4px 6px;
+    &:hover {
+      color: rgb(136, 220, 245);
+      background: #b9b9b9;
+      border-radius: 100px;
+    }
+  }
+}
+
+.container__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &-right {
+    margin: 1rem 0;
+  
+    & > a {
+      text-align: center;
+    }
+  }
+}

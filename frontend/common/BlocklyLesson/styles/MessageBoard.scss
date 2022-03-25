@@ -1,0 +1,90 @@
+@import 'common/styles/variables.scss';
+.messageboard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  outline: none;
+
+  .messageboardWindow {
+    margin: 0 auto;
+    height: 100%;
+
+    .messageboardHeader {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .messageboardBody {
+      background: #fff;
+      padding: 20px;
+    
+      .messageboardBodyHeader {
+        margin-bottom: 1px;
+      }
+
+      .messageboardFooterContents {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .messageboardName {
+        text-align: center;
+        padding-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      .messageboardContents {
+        padding: 10px 10px;
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+
+      .messageboardMoreButton {
+        background: $blue-1;
+        border: 0;
+        padding: 10px 20px;
+        border-radius: 100px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.sendMessage {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.receiveMessage {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.overlay {
+  border-radius: 1px;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  color: white;
+  background: rgba(#000, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    font-size: 22px;
+  }
+}
+
+.displayNone {
+  display: none;
+}

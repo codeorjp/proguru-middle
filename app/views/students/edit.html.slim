@@ -1,0 +1,20 @@
+.sessions
+  .container__main
+    .container-inner.single-contents
+      h2.h2-title プロフィールの編集
+      .base-form
+        = form_with(model: @student, method: :patch, local: true) do |form|
+          = render partial: "layouts/validation_error_messages", locals: { model: @student }
+          .base-form__field
+            = form.label :nickname
+            = form.text_field :nickname
+          .base-form__field
+            .base-form__title アイコンを選択する
+            .base-form__radios
+              - Student.icons.keys.each do |icon|
+                div
+                  = form.radio_button :icon, icon
+                  = form.label %(icon_#{icon}).to_sym
+                    = image_tag "/images/#{icon}.png", class: "image"
+          .base-form__field
+            = form.submit "更新する", class: "button button--primary"

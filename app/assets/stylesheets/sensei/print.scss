@@ -1,0 +1,20 @@
+@media print {
+  @page {
+    margin: 20px;
+  }
+}
+
+.container {
+  table, thead, tbody, tr, td {
+    margin: 0;
+    padding: 0;
+  }
+  thead {
+    font-size: 14px;
+  }
+  .item {
+    font-size: 22px;
+    border: 2px solid black;
+    padding: 0 2px;
+  }
+}

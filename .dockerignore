@@ -1,0 +1,8 @@
+/vendor/assets
+/node_modules
+/tmp
+/log
+/docker-compose.*
+/Dockerfile
+/k8s
+/config/credentials/*.key

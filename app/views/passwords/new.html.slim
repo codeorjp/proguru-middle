@@ -1,0 +1,48 @@
+.sessions
+  .container__main
+    .container-inner.single-contents
+      h2.h2-title パスワードの再設定
+      .password__description
+        ul
+          li 半角の英字 (a~z, A~Z) や数字 (0~9) ，記号 (!, ?, & など) が<br>使えるよ
+          li 半角の英字・数字・記号の中から2種類以上を組み合わせて<br>8文字以上の強いパスワードを設定しよう
+      .base-form
+        - url ||= passwords_path
+        = form_with(model: @form, url: url, local: true) do |form|
+          = render partial: "layouts/validation_error_messages", locals: { model: @form }
+          .base-form__field
+            = form.label :password
+            = form.password_field :password, id: "input_student_password"
+            p.base-form__password-visibility
+              | パスワードを表示する
+              input(type="checkbox" id="new_password_display")
+            = react_component "student/Password"
+          .base-form__field
+            = form.label :password_confirmation
+            = form.password_field :password_confirmation, id: "input_student_password_confirm"
+            p.base-form__password-visibility
+              | パスワードを表示する
+              input(type="checkbox" id="confirm_password_display")
+          .submit-field
+            = form.submit "パスワードを更新する", class: "button button--primary", id: "submit"
+#root
+  = javascript_pack_tag "application"
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "new_password_display", \
+    password_form_id: "input_student_password" \
+  }
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "confirm_password_display", \
+    password_form_id: "input_student_password_confirm" \
+  }
+javascript:
+  var unload = function(e) {
+    var confirmationMessage = "本当にこのページから移動しますか？"
+    e.preventDefault();
+    (e || window.event).returnValue = confirmationMessage;
+    return confirmationMessage;
+  }
+  window.addEventListener("beforeunload", unload, false);
+  document.getElementById("submit").addEventListener("click", function() {
+    window.removeEventListener("beforeunload", unload, false);
+  });

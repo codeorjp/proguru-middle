@@ -1,0 +1,10 @@
+.container__main
+  .container-inner.single-contents
+    .base-card-button
+      = link_to "チャットへ戻る", chat_rooms_path, class: "button button--secondary"
+    .base-card
+      - if @term.present?
+        .base-term-title 利用規約
+        .base-term #{simple_format(@term.content)}
+      - else
+        div まだチャットの利用規約がありません

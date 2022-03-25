@@ -1,0 +1,30 @@
+.container__main
+  .container-inner
+    div
+      h2.h2-title
+        .h2-title__text.class-item
+          div
+            p.class-item__id = t("views.shared.class_id", id: @class_room.id)
+          .class-item__title
+            p.class-item__year = t("views.shared.class_year", year: @class_room.school_year)
+            p.class-item__name = "#{@class_room.name}"
+        .h2-title__buttons
+          = link_to "https://storage.googleapis.com/proguru-secondary-production/answer.pdf", class: "h2-title__button button button--secondary", target: :_blank, rel: "noopener noreferrer"
+            span 解答例をダウンロード
+          = link_to sensei_class_room_students_path(@class_room.id), class: "h2-title__button button button--secondary"
+            span 生徒一覧
+    - @lessons.each do |lesson|
+      .workspaceList
+        .workspaceList__title
+          div
+            = image_tag("lesson_#{lesson.number}.png", class: "", width: 100, alt: "")
+          .workspaceList__text
+            p.workspaceList__lessonNum レッスン#{lesson.number}
+            p.workspaceList__lessonTitle #{lesson.title}
+        .workspaceList__items
+          - lesson.stages.each do |stage|
+            - num_of_submit = @workspaces[stage.id] || 0
+            = link_to sensei_class_room_stage_path(@class_room.id, stage.id), \
+                class: "workspaceList__item #{'-active' if num_of_submit.nonzero?}"
+              span.subtext 提出数 #{num_of_submit} / #{@num_of_students}
+              span ステージ#{stage.number}

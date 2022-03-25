@@ -1,0 +1,90 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+DEFAULTS: &DEFAULTS
+<%
+  student = Student.new
+  student.password = 'passw0rd'
+%>
+  encrypted_password: <%= student.encrypted_password %>
+
+profiled:
+  number: 1
+  class_room: one
+  nickname: 生徒1
+  icon: :avatar1
+  initial_token: token
+  initialized_at: <%= Time.current.to_s(:db) %>
+  remember_token: <%= Clearance::Token.new %>
+  status: :profiled
+  <<: *DEFAULTS
+
+created:
+  number: 2
+  class_room: one
+  initial_token: token1
+  remember_token: <%= Clearance::Token.new %>
+  status: :created
+
+passworded:
+  number: 4
+  class_room: one
+  initial_token: token
+  initialized_at: <%= Time.current.to_s(:db) %>
+  remember_token: <%= Clearance::Token.new %>
+  encrypted_password: <%= student.encrypted_password %>
+  status: :passworded
+  <<: *DEFAULTS
+
+two:
+  number: 5
+  class_room: one
+  nickname: CTO
+  icon: :avatar2
+  initial_token: token
+  initialized_at: <%= Time.current.to_s(:db) %>
+  remember_token: <%= Clearance::Token.new %>
+  status: :profiled
+  <<: *DEFAULTS
+
+account_locked:
+  number: 6
+  class_room: one
+  nickname: account_locked
+  icon: :avatar3
+  initial_token: token
+  initialized_at: <%= Time.current.to_s(:db) %>
+  remember_token: <%= Clearance::Token.new %>
+  failed_attempts: 10
+  status: :account_locked
+  <<: *DEFAULTS
+
+another:
+  number: 1
+  nickname: 生徒11
+  icon: :avatar4
+  class_room: another
+  initial_token: token
+  remember_token: <%= Clearance::Token.new %>
+  status: :profiled
+  <<: *DEFAULTS
+
+passworded_other_class:
+  number: 2
+  class_room: another
+  initial_token: token
+  initialized_at: <%= Time.current.to_s(:db) %>
+  remember_token: <%= Clearance::Token.new %>
+  encrypted_password: <%= student.encrypted_password %>
+  status: :passworded
+  <<: *DEFAULTS
+
+account_locked_other_class:
+  number: 3
+  class_room: another
+  nickname: account_locked_other_class
+  icon: :avatar3
+  initial_token: token
+  initialized_at: <%= Time.current.to_s(:db) %>
+  remember_token: <%= Clearance::Token.new %>
+  failed_attempts: 10
+  status: :account_locked
+  <<: *DEFAULTS

@@ -1,0 +1,100 @@
+@import "../variables";
+
+.base-form {
+  #error_explanation {
+    h2 {
+      color: red;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        color: red;
+      }
+    }
+  }
+  &__unit {
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &__require {
+    font-size: 12px;
+    background: #f24646;
+    padding: 2px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    color: #fff;
+    margin-right: 10px;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__field {
+    margin-bottom: 20px;
+    label {
+      display: inline-block;
+      min-width: 100px;
+      margin-right: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="integer"],
+    input[type="string"],
+    textarea {
+      display: inline-block;
+      box-sizing: border-box;
+      appearance: none;
+      border: 1px solid $gray-1;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .field_with_errors {
+      display: inline-block;
+
+      input {
+        border: 1px solid rgb(225, 57, 57);
+      }
+    }
+
+    input:focus,
+    select:focus {
+      outline: 0;
+    }
+  }
+  &__radios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .image {
+      pointer-events: none;
+      width: 60px;
+    }
+  }
+  &__checkbox {
+    margin-bottom: 20px;
+    a {
+      font-size: 16px;
+      color: blue;
+    }
+    input {
+      margin-right: 16px;
+    }
+    span {
+      margin: 0 4px;
+    }
+    label {
+      font-size: 16px;
+    }
+  }
+  &__password-visibility {
+    margin-top: 4px;
+
+    input[type="checkbox"] {
+      margin-left: 8px;
+    }
+  }
+}

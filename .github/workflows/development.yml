@@ -1,0 +1,92 @@
+name: development
+
+on: push
+
+jobs:
+  eslint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: dev-yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            dev-yarn-${{ runner.os }}-
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+
+  ruby-lint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.6
+          bundler-cache: true
+      - run: bundle exec rubocop -D
+      - run: bundle exec slim-lint ./**/*.slim -e ./vendor/bundle/**/*.slim
+
+  js-test:
+    runs-on: ubuntu-18.04
+    needs: [eslint]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: dev-yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            dev-yarn-${{ runner.os }}-
+      - run: yarn install --frozen-lockfile
+      - run: yarn test:ci
+
+  rails-test:
+    runs-on: ubuntu-18.04
+    needs: [ruby-lint]
+    services:
+      chrome:
+        image: selenium/standalone-chrome:3.141
+        ports:
+          - 4444:4444
+        volumes:
+          - /dev/shm:/dev/shm
+    steps:
+      - run: sudo /etc/init.d/mysql start
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.6
+          bundler-cache: true
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: dev-yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            dev-yarn-${{ runner.os }}-
+      - run: yarn install --frozen-lockfile
+      - name: Setup DB
+        env:
+          RAILS_ENV: test
+          DB_PASS: root
+        run: |
+          while ! mysqladmin ping -h"127.0.0.1" -P"3306" --silent; do
+            sleep 1
+          done
+          bin/rails db:prepare
+      - name: Run Rails test
+        env:
+          DB_PASS: root
+        run: |
+          bin/rails test
+          bin/rails test:system

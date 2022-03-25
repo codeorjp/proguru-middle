@@ -1,0 +1,29 @@
+# Any fixture labeled “DEFAULTS” is safely ignored.
+DEFAULTS: &DEFAULTS
+  fullname: 先生1
+<%
+  teacher = Teacher.new
+  teacher.password = 'passw0rd'
+%>
+  encrypted_password: <%= teacher.encrypted_password %>
+
+unconfirmed:
+  email: unconfirmed@example.com
+  email_confirmation_token: <%= Clearance::Token.new %>
+  remember_token: <%= Clearance::Token.new %>
+  email_confirmed_at: nil
+  <<: *DEFAULTS
+
+confirmed:
+  email: confirmed@example.com
+  email_confirmation_token: <%= Clearance::Token.new %>
+  remember_token: <%= Clearance::Token.new %>
+  email_confirmed_at: <%= Time.current.to_s(:db) %>
+  <<: *DEFAULTS
+
+another:
+  email: another@example.com
+  email_confirmation_token: <%= Clearance::Token.new %>
+  remember_token: <%= Clearance::Token.new %>
+  email_confirmed_at: <%= Time.current.to_s(:db) %>
+  <<: *DEFAULTS

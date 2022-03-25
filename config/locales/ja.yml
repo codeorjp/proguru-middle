@@ -1,0 +1,200 @@
+ja:
+  activerecord:
+    models:
+      teacher: "先生"
+      class_room: "クラス"
+      student: "生徒"
+      message: "メッセージ"
+      message_board: "チャット"
+      workspace: "ワークスペース"
+      term: "利用規約"
+      keyword: "キーワード"
+    attributes:
+      class_room:
+        name: "クラス名"
+        school_year: "年度"
+        students_count: "クラス人数"
+      student:
+        number: "出席番号"
+        class_room_id: "クラスID"
+        initial_token: "初期パスワード"
+        nickname: ニックネーム
+        icon: アイコン
+        password: "パスワード"
+        password_confirmation: "パスワード（確認用）"
+      teacher:
+        fullname: 氏名
+        nickname: ニックネーム
+        icon: アイコン
+        email: メールアドレス
+        unconfirmed_email: メールアドレス
+        password: パスワード
+        email_delivery_allowed: メール受信可否
+      message:
+        message_board: チャット
+      message_form:
+        body: メッセージ本文
+        kind: チャットの種別
+      message_board:
+        kind:
+          performance: チャット
+          lesson: レッスン
+      term:
+        content: 利用規約の内容
+      keyword:
+        content: キーワード
+    errors:
+      record_not_found: "対象の%{record}が見つかりませんでした"
+  activemodel:
+    attributes:
+      message_form:
+        body: メッセージ本文
+        kind: チャットの種別
+        sender: 送信者
+        image: 画像
+      student_profile_form:
+        nickname: ニックネーム
+        icon: アイコン
+      say_hello_form:
+        hour: 時間
+      class_room_form:
+        name: "クラス名"
+        school_year: "年度"
+        students_count: "クラス人数"
+      password_form:
+        password: パスワード
+        password_confirmation: パスワード（確認用）
+      sensei/change_password_form:
+        current_password: 現在のパスワード
+        new_password: 新しいパスワード
+        new_password_confirmation: 新しいパスワード（確認用）
+  errors:
+    messages:
+      failed_password_authentication: "が一致しません"
+      failed_safe_password_format_validation_invalid_letters: "は半角の英字・数字・記号以外の文字では入力できません"
+      failed_safe_password_format_validation_insufficient_combination: "は半角の英字・数字・記号の中から2種類以上を組み合わせて入力してください"
+      failed_keyword_creation_maximum_count_exceeded: "を登録できるのは10個までです"
+  views:
+    default:
+      back: "戻る"
+      edit: "編集"
+      show: "表示"
+      destroy: "削除"
+      destroy_confirm: "削除しますか？"
+    shared:
+      class_id: "クラスID: %{id}"
+      class_full_name: "%{year}年度%{name}"
+      class_year: "%{year}年度"
+  helpers:
+    label:
+      session:
+        fullname: 氏名
+      password:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認用）
+    submit:
+      student:
+        sign_up: "利用登録"
+        sign_in: "ログイン"
+  sensei:
+    class_rooms:
+      index:
+        title: "クラスチャット一覧"
+        message_board: "チャット名"
+        students: "生徒管理"
+      create:
+        success: "クラスが作成されました"
+      update:
+        success: "クラス情報を更新しました"
+      destroy:
+        success: "クラスが削除されました"
+      edit:
+        title: "クラスの編集"
+    students:
+      index:
+        title: "生徒管理"
+        progress: "進捗状況"
+      create:
+        success: "生徒が登録されました"
+      update:
+        success: "生徒情報を更新しました"
+      destroy:
+        success: "生徒情報が削除されました"
+      edit:
+        title: "生徒の編集"
+      reset:
+        success: "対象の生徒を初期化しました"
+      unlock:
+        success: "対象の生徒のロックを解除しました"
+    teachers:
+      edit:
+        title: "プロフィールの編集"
+        withdrawal: "退会"
+        withdraw: "退会する"
+        withdraw_description: "退会するとクラスや生徒データ，レッスンの進捗，生徒が送信したメッセージはすべて削除されます。"
+        withdraw_confirm: "退会するとデータはすべて削除されます。\nクラス数やメッセージ数が多いと退会処理に時間がかかることがあります。\n本当に退会しますか？"
+      update:
+        success: "アカウントの設定を更新しました"
+      destroy:
+        success: "アカウントが削除されました"
+    messages:
+      update:
+        success: "メッセージを更新しました"
+      destroy:
+        success: "メッセージが削除されました"
+      edit:
+        title: "メッセージの編集"
+    terms:
+      new:
+        template: "チャットの利用にあたり、以下の行為をしてはいけません。\n\n1. 相手の嫌がる内容を投稿する行為\n\n2. 他の生徒になりすます行為\n\n\nどんな決まりを入れるとみんなが気持ちよく使えるか考えてみよう！\n考えたチャットの利用ルールを書き加えよう！"
+      create:
+        success: "利用規約を保存しました"
+      update:
+        success: "利用規約を保存しました"
+    passwords:
+      new:
+        title: パスワードのリセット
+    change_passwords:
+      update:
+        success: "パスワードを変更しました"
+    sessions:
+      new:
+        forgot_password: パスワードをお忘れですか？
+    emails:
+      edit:
+        title: メールアドレスの変更
+  students:
+    layouts:
+      application:
+        sign_in: "ログイン"
+        sign_out: "ログアウト"
+    status:
+      created: "まだ利用登録していません"
+      passworded: "プロフィールが設定されていません"
+      profiled: "アカウント作成が完了しました"
+      account_locked: "ロックされています"
+  sessions:
+    token_confirmation:
+      error: "入力に誤りがあります"
+      already_signed_up_error: "ログインしてください"
+      enter_initial_token_half_width_characters: "初期パスワードは半角文字で入力してください"
+    create:
+      success: "ログインしました"
+      error: "クラスID，出席番号，パスワードのいずれかが誤っています"
+      account_locked: "このアカウントは，ログインに10回以上失敗したためロックされています。先生にロックを解除してもらってください"
+    destroy:
+      success: "ログアウトしました"
+  lessons:
+    index:
+      settings: "設定"
+  workspaces:
+    create:
+      success: 提出しました
+      error: 提出に失敗しました
+      not_found: 提出先が見つかりません
+  keywords:
+    create:
+      success: キーワードが作成できました
+    destroy:
+      not_found: 対象のキーワードが見つかりませんでした

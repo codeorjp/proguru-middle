@@ -1,0 +1,5 @@
+.container__side
+  .side-menu
+    p.side-menu__title 管理メニュー
+    = link_to "クラス一覧", sensei_class_rooms_path, class: "side-menu__list #{'active' if current_page? sensei_class_rooms_path}"
+    = link_to "アカウント設定", edit_sensei_teacher_path(current_user), class: "side-menu__list #{'active' if current_page? edit_sensei_teacher_path(current_user)}"

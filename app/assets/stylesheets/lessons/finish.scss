@@ -1,0 +1,60 @@
+@import "../variables";
+
+.finish {
+  width: 714px;
+  margin: 30px auto;
+  position: relative;
+  &__text {
+    position: absolute;
+    left: 50px;
+    top: 130px;
+    p {
+      text-align: left;
+    }
+  }
+  &__congratulation {
+    font-size: 62px;
+    color: #BF6811;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin: 0;
+  }
+  &__subtext {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.05s linear;
+    &--primary {
+      color: #fff;
+      background: $main-color;
+      border: none;
+      &:hover {
+        background: #005aea;
+      }
+      &:visited,
+      &:hover {
+        color: #fff;
+      }
+    }
+    &--secondary {
+      color: $main-color;
+      background: #fff;
+      border: 1px solid $main-color;
+      &:visited {
+        color: $main-color;
+      }
+      &:hover {
+        color: #fff;
+        background: $main-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+
+ja:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: パスワードをリセットしてください
+  flashes:
+    failure_after_create: メールアドレスもしくはパスワードが誤っています
+    failure_after_update: Passwordが空欄です
+    failure_when_forbidden: もう一度URLをご確認いただくか，再度登録をお試しください。
+    failure_when_not_signed_in: ログインされていません
+    failure_when_missing_email: メールアドレスが空欄です
+  helpers:
+    label:
+      password:
+        email: メールアドレス
+      password_reset:
+        password: パスワード
+        password_confirm: パスワード（確認用）
+        password_confirmation: パスワード（確認用）
+      session:
+        email: メールアドレス
+        password: パスワード
+      email: メールアドレス
+      password: パスワード
+    submit:
+      password:
+        submit: パスワードをリセットする
+      password_reset:
+        submit: パスワードを保存する
+      session:
+        submit: ログイン
+      teacher:
+        create: 利用登録
+  layouts:
+    application:
+      sign_in: ログイン
+      sign_out: ログアウト
+  passwords:
+    create:
+      description: まもなくパスワードをリセットするための方法を記載したメールが送信されます。
+    edit:
+      description: パスワードはリセットされました。新しいパスワードを登録してください。
+      title: パスワードを変更する
+    new:
+      description: パスワードをリセットするリンクをメールで送信します。
+        メールアドレスを入力してください。
+      title: パスワードをリセットする
+  sensei:
+    sessions:
+      form:
+        forgot_password: パスワードをお忘れですか？
+        sign_up: 利用登録
+      new:
+        title: ログイン
+    teachers:
+      new:
+        sign_in: ログイン
+        title: 利用登録

@@ -1,0 +1,32 @@
+@import "../variables";
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+
+  a,  span,  em {
+    padding: 0.5em 0.8em;
+    margin-left: 4px;
+  }
+
+  .disabled {
+    color: $black-3;
+    border: 1px solid $gray-1;
+  }
+
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: $main_color;
+    color: $light-blue;
+    border: 1px solid $main_color;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main_color;
+    border: 1px solid $main_color;
+  }
+}

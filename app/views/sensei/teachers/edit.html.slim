@@ -1,0 +1,37 @@
+.container__main
+  .container-inner
+    h2.h2-title = t(".title")
+    .base-form
+      = form_with(model: [:sensei, @teacher], method: "patch", local: true) do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: @teacher }
+        .base-form__field
+          = form.label :fullname
+          = form.text_field :fullname
+        .base-form__field
+          = form.label :nickname
+          = form.text_field :nickname
+        .base-form__field
+          = form.label :icon
+          = form.file_field :icon
+          - if @teacher.icon.attached?
+            = link_to image_tag(@teacher.icon.variant(resize: "100x100").processed), @teacher.icon, target: :_blank, rel: "noopener noreferrer"
+        .base-form__field
+          = form.submit "登録する", class: "button button--primary"
+    h2.h2-title メールアドレス
+    = link_to "メールアドレスを変更する", edit_sensei_teacher_email_path(@teacher), class: "button button--secondary"
+    h2.h2-title パスワード
+    = link_to "パスワードを変更する", edit_sensei_change_password_path, class: "button button--secondary"
+    h2.h2-title 配信メール受信可否
+    .base-form
+      = form_with(model: [:sensei, @teacher], method: "patch", local: true) do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: @teacher }
+        p 現在、 「#{@teacher.email_delivery_allowed? ? '配信メールを受信する' : '配信メールを受信しない'}」 ように設定されています。
+        .base-form__checkbox
+          = form.check_box :email_delivery_allowed
+          = form.label :email_delivery_allowed, "配信メールを受信する"
+        .base-form__field
+          = form.submit "配信メール受信可否を変更する", class: "button button--primary"
+    h2.h2-title #{t(".withdrawal")}
+    p #{t(".withdraw_description")}
+    = link_to "#{t(".withdraw")}", sensei_teacher_path(@teacher), method: :delete, class: "button button--secondary", \
+      data: { confirm: t(".withdraw_confirm") }

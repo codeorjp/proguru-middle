@@ -1,0 +1,64 @@
+.body {
+  background-color: #333;
+  padding: 15px 0 0;
+}
+
+.header {
+  color: #666;
+  border-bottom: 1px solid #666;
+}
+
+.headerContents {
+  padding: 0px 20px 10px 20px;
+}
+
+.headerLeft {
+  text-align: left;
+  float: left;
+}
+
+.headerRight {
+  text-align: right;
+  font-size: 12px;
+  user-select: none;
+}
+
+.main {
+  color: white;
+  padding-top: 10px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  outline: none;
+}
+
+.mainContents {
+  padding-left: 20px;
+}
+
+.overlay {
+  border-radius: 1px;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(#fff, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    font-size: 22px;
+  }
+}
+
+.displayNone {
+  display: none;
+}

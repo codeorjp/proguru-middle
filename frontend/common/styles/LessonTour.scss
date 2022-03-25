@@ -1,0 +1,46 @@
+@import 'common/styles/variables.scss';
+.LessonTour {
+  font-weight: bold;
+  div[data-tour-elem="controls"] {
+    justify-content: space-between;
+  }
+  button[data-tour-elem="right-arrow"] {
+    background: $blue-1;
+    color: #fff;
+    padding: 10px;
+    padding: 10px 30px;
+    border-radius: 4px;
+  }
+  button[data-tour-elem="left-arrow"] {
+    background: $blue-1;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 4px;
+  }
+  button[data-tour-elem="right-arrow"][disabled] {
+    background: #caccce;
+    color: #666;
+  }
+  button[data-tour-elem="left-arrow"][disabled] {
+    background: #caccce;
+    color: #666;
+  }
+}
+
+.tourContent {
+  & > p {
+    text-align: center;
+    font-size: $font-size-l;
+    margin: $space-s 0 $space-xs;
+  }
+  & > div {
+    font-weight: normal;
+    span {
+      padding: 0 $space-xs;
+    }
+  }
+  & > img {
+    padding-top: 10px;
+    width: 100%;
+  }
+}

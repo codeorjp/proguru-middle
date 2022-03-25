@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+  padding: 20px;
+}
+
+.description {
+  font-size: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.table {
+  background-color: white;
+  padding: 10px;
+  height: 400px;
+
+  thead, tbody {
+    display: block;
+  }
+
+  tbody {
+    max-height: 370px;
+    overflow-y: scroll;
+  }
+
+  th {
+    padding: 6px 10px;
+  }
+
+  td {
+    padding: 5px 10px;
+  }
+}
+
+.id {
+  width: 50px;
+}
+
+.userName {
+  width: 100px;
+}
+
+.body {
+  width: 200px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.createdAt {
+  width: 100px;
+}
+
+.messageboardFooterContents {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 15px;
+}

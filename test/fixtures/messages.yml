@@ -1,0 +1,30 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  message_board: :lesson
+  sender: profiled (Student)
+
+teacher:
+  body: MyString
+  message_board: :lesson
+  sender: confirmed (Teacher)
+
+prod:
+  body: MyString
+  message_board: :performance
+  sender: profiled (Student)
+
+<% 1.upto(21) do |i| %>
+two_<%= i %>:
+  body: <%= "#{i}" %>
+  message_board: :lesson
+  sender: two (Student)
+<% end %>
+
+<% 1.upto(10) do |i| %>
+another_<%= i %>:
+  body: <%= "#{i}" %>
+  message_board: :another
+  sender: another (Student)
+<% end %>

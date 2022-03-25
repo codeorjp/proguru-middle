@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta content="text/html" charset="UTF-8" http-equiv="Content-Type"
+    meta name="viewport" content="width=device-width,initial-scale=1"
+    title プログル技術｜中学校・技術で使える「双方向性のあるコンテンツのプログラミング」に特化した教材
+    meta name="description" content="プログル技術は「双方向性のあるコンテンツのプログラミング」に特化した、中学校・技術の授業ですぐに使えるプログラミング教材です。チャットアプリの制作を通して、情報科社会に生きる上で必要となる考え方を自然と身につけることができます。"
+    meta property="og:title" content="プログル技術｜中学校・技術で使える「双方向性のあるコンテンツのプログラミング」に特化した教材"
+    meta property="og:type" content="website"
+    meta property="og:url" content="https://middle.proguru.jp"
+    meta property="og:image" content=image_url("ogp.png")
+    meta property="og:site_name" content="プログル技術"
+    meta property="og:description" content="プログル技術は「双方向性のあるコンテンツのプログラミング」に特化した、中学校・技術の授業ですぐに使えるプログラミング教材です。チャットアプリの制作を通して、情報科社会に生きる上で必要となる考え方を自然と身につけることができます。"
+    meta name="twitter:card" content="summary_large_image"
+    meta name="twitter:title" content="プログル技術｜中学校・技術で使える「双方向性のあるコンテンツのプログラミング」に特化した教材"
+    meta name="twitter:url" content="https://middle.proguru.jp"
+    meta name="twitter:image" content=image_url("ogp.png")
+    meta name="twitter:description" content="プログル技術は「双方向性のあるコンテンツのプログラミング」に特化した、中学校・技術の授業ですぐに使えるプログラミング教材です。チャットアプリの制作を通して、情報科社会に生きる上で必要となる考え方を自然と身につけることができます。"
+    link rel="apple-touch-icon" size="180x180" href=image_url("apple-touch-icon.png")
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag "favicon.ico"
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous"
+    = stylesheet_link_tag "home"
+    = javascript_include_tag "home"
+  body
+    = yield

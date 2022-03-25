@@ -1,0 +1,33 @@
+#clearance.password-reset
+.container__main
+  .container-inner.single-contents
+    h2.h2-title パスワードの再設定
+    .password__description
+      ul
+        li 半角の英字 (a~z, A~Z) や数字 (0~9) ，記号 (!, ?, & など) が使用できます
+        li 半角の英字・数字・記号の中から2種類以上を組み合わせて8文字以上のパスワードを設定してください
+    .base-form
+      = form_for :password_reset, url: sensei_teacher_password_path(@user, token: @user.confirmation_token), method: :patch do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: @user }
+        .base-form__field
+          = form.label :password
+          = form.password_field :password
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="new_password_display")
+        .base-form__field
+          = form.label :password_confirm
+          = form.password_field :password_confirm
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="confirm_password_display")
+        .submit-field
+          = form.submit "パスワードを更新する", class: "button button--primary"
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "new_password_display", \
+    password_form_id: "password_reset_password" \
+  }
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "confirm_password_display", \
+    password_form_id: "password_reset_password_confirm" \
+  }

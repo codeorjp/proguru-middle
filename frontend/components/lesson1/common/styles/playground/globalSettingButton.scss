@@ -1,0 +1,26 @@
+@import "common/styles/variables.scss";
+
+.button {
+  appearance: none;
+  background: $light-blue-1;
+  color: $blue-1;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  outline: none;
+  padding: 4px 14px;
+  position: absolute;
+  right: 80px;
+  top: 15px;
+  align-items: center;
+  transition: 0.1s all linear;
+  &:hover {
+    background: $blue-1;
+    color: $light-blue-1;
+  }
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 4px;
+}

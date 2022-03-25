@@ -1,0 +1,21 @@
+header#header
+  .header-wrapper
+    .header-wrapper__logoArea
+      p
+        = link_to image_tag("logo.png", height: "40px", class: "", alt: "プログル"), @current_student.present? ? lessons_path : root_path
+      - if @current_student.present? && @current_student.profiled?
+        - unless current_page? lessons_path
+          = link_to lessons_path, class: "header-button"
+            = image_tag("home.png", height: "20px", alt: "ホーム")
+            span ホーム
+      - if current_page? lessons_path
+        p.header-wrapper__detail #{@class_room.name}
+        p.header-wrapper__detail 出席番号: #{@current_student.number}
+        p.header-wrapper__detail #{@current_student.nickname}
+    - if @current_student.present? && @current_student.profiled?
+      .header__right
+        = link_to "ログアウト", sign_out_path, method: :delete, class: "header__right__link"
+        - if current_page? chat_rooms_path
+          = link_to "利用規約を見る", terms_path, class: "header__right__link"
+        = link_to "ヘルプ", help_path, class: "header__right__link #{"current-page" if current_page? help_path}"
+        = link_to "マイページ", edit_student_path, class: "header__right__link #{"current-page" if current_page? edit_student_path}"

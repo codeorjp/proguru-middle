@@ -1,0 +1,52 @@
+@import "../../variables";
+
+#sensei-class-page {
+  .class-list {
+    .class-list-item {
+      padding: 10px 0 20px;
+      border-bottom: 1px solid $gray-1;
+      &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > div {
+          display: flex;
+          align-items: center;
+          & > * {
+            margin-right: 10px;
+          }
+        }
+      }
+      &__year, &__id {
+        background: $gray-2;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 100px;
+      }
+      &__name {
+        font-size: 18px;
+      }
+      &__student {
+        font-size: 12px;
+      }
+      &__buttons {
+        display: flex;
+        align-items: center;
+        & > * {
+          margin-right: 10px;
+        }
+      }
+      &__button {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        .icon {
+          font-size: 22px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

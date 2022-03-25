@@ -1,0 +1,54 @@
+@import "common/styles/variables.scss";
+
+.paddingField {
+  width: 210px;
+  height: 140px;
+  position: relative;
+}
+
+.centerRect {
+  background: $gray-2;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.paddingInput {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  margin: auto;
+  input {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.topPos {
+  left: 0;
+  right: 0;
+}
+
+.leftPos {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.rightPos {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bottomPos {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,7 @@
+ja:
+  will_paginate:
+    previous_label: "&#8592; 前"
+    next_label: "次 &#8594;"
+    page_gap: "&hellip;"
+    container_aria_label: "Pagination"
+    page_aria_label: "Page %{page}"

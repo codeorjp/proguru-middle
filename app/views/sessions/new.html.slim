@@ -1,0 +1,28 @@
+.sessions
+  .container__main
+    .container-inner.single-contents
+      p.logo
+        = link_to(image_tag("logo.png", class: "", alt: "プログル"), "/")
+      h2 ログインページ
+      .base-form
+        = form_with(model: Student.new, url: sessions_path, local: true) do |form|
+          .base-form__field
+            = form.label :class_room_id
+            = form.text_field :class_room_id, type: "number", required: true
+          .base-form__field
+            = form.label :number
+            = form.text_field :number, type: "number", required: true
+          .base-form__field
+            = form.label :password
+            = form.password_field :password, required: true
+            p.base-form__password-visibility
+              | パスワードを表示する
+              input(type="checkbox" id="password_display")
+          .base-form__field
+            = form.submit "ログインする", class: "button button--primary"
+          p
+            = link_to "パスワードの設定がまだの方はこちら", sign_up_path
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "password_display", \
+    password_form_id: "student_password" \
+  }

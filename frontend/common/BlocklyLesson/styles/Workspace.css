@@ -1,0 +1,7 @@
+#BlocklyRoot > div > div {
+  width: 100% !important;
+}
+
+.blocklySvg {
+  width: 100% !important;
+}

@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Submit Button render SubmitButton 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Submit Button set background: #007FEB 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#007FEB",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Submit Button set border-radius: 4px 4px 4px 4px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "4px 4px 4px 4px",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Submit Button set color: #FFFFFF 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#FFFFFF",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Submit Button set font-size: 16px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "16px",
+        "padding": "",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Submit Button set padding: 14px 14px 14px 14px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "14px 14px 14px 14px",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Submit Button set text-align: center 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <button
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+        "textAlign": "center",
+      }
+    }
+    type="submit"
+  >
+    送信する
+  </button>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;

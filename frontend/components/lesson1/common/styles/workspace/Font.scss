@@ -1,0 +1,32 @@
+@import "common/styles/variables.scss";
+.textAlignField {
+  display: flex;
+  width: 100%;
+  font-size: 30px;
+  color: $gray-3;
+  height: 41px;
+  & > * {
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid $gray-2;
+    cursor: pointer;
+    &:first-child {
+      border-width: 1px 0 1px 1px;
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-child {
+      border-width: 1px 1px 1px 0;      
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  .isActive {
+    background: $blue-1;
+    color: #fff;
+  }
+}
+.sizeInput {
+  width: 90px;
+}
+.alignIcon {
+  line-height: 1.3;
+}

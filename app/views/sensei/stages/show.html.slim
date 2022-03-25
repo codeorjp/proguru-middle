@@ -1,0 +1,41 @@
+= javascript_pack_tag "application"
+
+.container__main
+  .container-inner
+    div
+      h2.h2-title
+        .h2-title__text.class-item
+          div
+            p.class-item__id = t("views.shared.class_id", id: @class_room.id)
+          .class-item__title
+            p.class-item__year = t("views.shared.class_year", year: @class_room.school_year)
+            p.class-item__name = "#{@class_room.name} レッスン #{@lesson.number} ステージ#{@stage.number} の課題一覧"
+        .h2-title__buttons
+          = link_to sensei_class_room_stages_path(@class_room.id), class: "h2-title__button button button--secondary"
+            span ステージ一覧
+    div
+      = will_paginate @students
+      table.app-table
+        thead.app-table__head
+          th 出席番号
+          th ニックネーム
+          th 提出日
+          th 課題
+        tbody.app-table__body
+          - @students.each do |student|
+            - workspace = @workspaces[student.id]&.first
+            tr
+              td = student.number
+              td = student.nickname
+              td = workspace.nil? ? '-' : workspace.created_at.to_s(:datetime)
+              td
+                - if workspace.nil?
+                  未提出
+                - else
+                  #root
+                    = react_component "sensei/workspaces/lesson#{@lesson.number}/App", \
+                      lesson: @lesson,
+                      stage: @stage,
+                      student: student,
+                      workspace: workspace
+      = will_paginate @students

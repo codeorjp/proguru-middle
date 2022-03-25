@@ -1,0 +1,9 @@
+.base-form
+  - url ||= [:sensei, student.class_room, student]
+  = form_with(model: student, url: url, local: true) do |form|
+    = render partial: "layouts/validation_error_messages", locals: { model: student }
+    .base-form__field
+      = form.label :number
+      = form.number_field :number
+    .base-form__field
+      = form.submit "登録する", class: "button button--primary"

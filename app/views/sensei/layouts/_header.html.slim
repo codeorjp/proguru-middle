@@ -1,0 +1,10 @@
+header.header
+  .header-wrapper
+    .header-wrapper__logoArea
+      p
+        = link_to(image_tag("logo.png", height: "40px", class: "", alt: "プログル"), current_user.present? ? sensei_class_rooms_path : root_path)
+      p.header-wrapper__detail 先生用管理画面
+    div
+      - if current_user.present?
+        .header__right
+          = link_to "ログアウト", sensei_sign_out_path, method: :delete, class: "header__right__link"

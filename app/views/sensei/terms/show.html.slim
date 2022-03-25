@@ -1,0 +1,10 @@
+.container__main
+  .container-inner
+    h2.h2-title 利用規約の確認
+    .app-term
+      - if @term.present?
+        .base-card
+          .base-term-title 利用規約
+          div #{simple_format(@term.content)}
+      - else
+        .base-card チャットの利用規約は入力されていません

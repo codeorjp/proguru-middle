@@ -1,0 +1,13 @@
+.container__main
+  .container-inner
+    h2.h2-title = term_label
+    .base-form
+      = form_with(model: term, url: sensei_class_room_terms_path, local: true) do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: term }
+        .base-form__field
+          - if current_page? new_sensei_class_room_terms_path(@class_room)
+            = form.text_area :content, cols: "100", rows: "20", value: term_template
+          - else
+            = form.text_area :content, cols: "100", rows: "20"
+        .base-form__field
+          = form.submit "保存する", class: "button button--primary"

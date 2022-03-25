@@ -1,0 +1,28 @@
+.container__main
+  .container-inner
+    div
+      h2.h2-title
+        .h2-title__text.class-item 出席番号 #{@student.number}番 #{@student.nickname} さんの提出済み課題一覧
+        .h2-title__buttons
+          = link_to "https://storage.googleapis.com/proguru-secondary-production/answer.pdf", class: "h2-title__button button button--secondary", target: :_blank, rel: "noopener noreferrer"
+            span 解答例をダウンロード
+      - if @workspaces.blank?
+        h2 提出済みの課題はありません
+      - @lessons.each do |lesson|
+        .workspaceList
+          .workspaceList__title
+            div
+              = image_tag("lesson_#{lesson.number}.png", class: "", width: 100, alt: "")
+            .workspaceList__text
+              p.workspaceList__lessonNum レッスン#{lesson.number}
+              p.workspaceList__lessonTitle #{lesson.title}
+          .workspaceList__items
+            - lesson.stages.each do |stage|
+              - if workspace_id = @workspaces[stage.id]
+                = link_to sensei_workspace_path(workspace_id), class: "workspaceList__item -active"
+                  span.subtext 提出済み
+                  span ステージ#{stage.number}
+              - else
+                .workspaceList__item
+                  span.subtext 未提出
+                  span ステージ#{stage.number}

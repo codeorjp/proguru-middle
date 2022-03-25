@@ -1,0 +1,58 @@
+@import 'common/styles/variables.scss';
+
+p.sampleAreaTitle {
+  background: $light-blue-1;
+  border-radius: 100px;
+  display: inline-block;
+  padding: $space-xs $space-m;
+  color: $blue-1;
+  margin-bottom: 20px;
+}
+
+p.designAreaTitle {
+  background: $gray-2;
+  border-radius: 6px 6px 0 0;
+  display: inline-block;
+  padding: $space-m $space-m $space-xs;
+}
+
+p.styleTitle {
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 10px;
+  margin-bottom: 20px !important;
+}
+
+p.windowButton {
+  font-size: 20px;
+  color: #e6e6e6;
+  user-select: none;
+}
+
+.messageBoardTitle {
+  padding: $space-xl $space-xl 0;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.sampleDetail {
+  border-radius: 4px;
+  margin-top: 20px;
+  background: #e6e6e6;
+  padding: 10px;
+}
+
+p.sampleDetailTextTitle {
+  font-size: 14px;
+  color: rgb(94, 94, 94);
+  margin-bottom: 4px;
+}
+
+.sampleDetailText {
+  font-size: 12px;
+  display: flex;
+  p {
+    padding: 0 4px;
+  }
+}

@@ -1,0 +1,15 @@
+.container__main
+  .container-inner
+    div
+      p.attendanceNum 出席番号 #{@student.number}番 #{@student.nickname} さん
+      h2.h2-title レッスン #{@lesson.number} ステージ#{@stage.number} の課題
+      dl
+        dt
+          | 提出日: #{@workspace.created_at.to_s(:datetime)}
+      #root
+        = javascript_pack_tag "application"
+        = react_component "sensei/workspaces/lesson#{@lesson.number}/App", \
+          lesson: @lesson,
+          stage: @stage,
+          student: @student,
+          workspace: @workspace

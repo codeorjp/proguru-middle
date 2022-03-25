@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat Input render ChatInput 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set background: #F5F5F5 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#F5F5F5",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set border-color: #D8D8D8, border-style: solid, boder-width: 1px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderColor": "#D8D8D8",
+        "borderRadius": "",
+        "borderStyle": "solid",
+        "borderWidth": "1px",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set border-radius: 4px 4px 4px 4px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "4px 4px 4px 4px",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set color: #757575 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#757575",
+        "fontSize": "14px",
+        "padding": "",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set font-size: 16px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "16px",
+        "padding": "",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set padding: 14px 14px 14px 14px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "14px 14px 14px 14px",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Chat Input set text-align: left 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <input
+    onChange={[Function]}
+    placeholder="テキストを入力するエリア"
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "color": "#000",
+        "fontSize": "14px",
+        "padding": "",
+        "textAlign": "left",
+      }
+    }
+    value="テキストを入力するエリア"
+  />
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+    image: proguru_middle-web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - mailer
+    environment:
+      DB_HOST: db
+      SMTP_ADDRESS: mailcatcher
+      TZ: "Asia/Tokyo"

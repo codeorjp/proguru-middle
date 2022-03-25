@@ -1,0 +1,21 @@
+.sessions
+  .container__main
+    .container-inner.single-contents
+      p.logo
+        = link_to(image_tag("logo.png", class: "", alt: "プログル"), "/")
+      h2 新規登録ページ
+      .base-form
+        = form_with(model: Student.new, url: token_confirmation_path, local: true) do |form|
+          .base-form__field
+            = form.label :class_room_id
+            = form.text_field :class_room_id, type: "number", required: true
+          .base-form__field
+            = form.label :number
+            = form.text_field :number, type: "number", required: true
+          .base-form__field
+            = form.label :initial_token
+            = form.text_field :initial_token, required: true
+          .base-form__field
+            = form.submit "アカウントを作成する", class: "button button--primary"
+          p
+            = link_to "パスワードを設定済みの方はこちら", sign_in_path

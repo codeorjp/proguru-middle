@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat Body render ChatBody 1`] = `
+<div
+  style={
+    Object {
+      "background": "#fff",
+    }
+  }
+/>
+`;
+
+exports[`Chat Body set background: #FF0000 1`] = `
+<div
+  style={
+    Object {
+      "background": "#FF0000",
+    }
+  }
+/>
+`;
+
+exports[`Chat Body set font-family: Kosugi Maru 1`] = `
+<div
+  style={
+    Object {
+      "background": "#fff",
+      "fontFamily": "Kosugi Maru",
+    }
+  }
+/>
+`;

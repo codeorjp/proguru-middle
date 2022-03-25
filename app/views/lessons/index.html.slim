@@ -1,0 +1,56 @@
+.top
+  .top__header
+    .header__wrap
+      .header__title
+        .header__dots
+          = image_tag("dots.png", class: "", width: 60, alt: "レッスン１")
+        p Let’s make a class message board !
+        h1 クラスのチャットを作ろう！
+      .header__image
+        = image_tag("header_bg.png", class: "", width: 800, alt: "チャットをつくろう")
+  .top__lesson
+    .top__card
+      .card__messageBoard
+        div
+          = image_tag("message_board.png", class: "", width: 176, alt: "チャット")
+        .card__messageMain
+          p あなたの作成したチャット
+          .subtext
+            | チャットはレッスン5で完成します
+          = link_to chat_rooms_path, class: "button button--secondary"
+            span チャットを確認する
+        = image_tag("gramin.png", class: "", width: 130, alt: "チャットをつくろう")
+    - @lessons.each do |lesson|
+        .top__card
+          .card__innerWrap
+            .title__leftArea
+              .card__titleArea
+                .title__bgNum class="lesson#{lesson.number}" #{lesson.number}
+                .title__detail
+                  .title__num class="lesson#{lesson.number}" Lesson #{lesson.number}
+                  .title__name
+                    = lesson.title
+                    - case lesson.number
+                    - when 1
+                      p Design a message board!
+                    - when 2
+                      p Let's communicate with the server!
+                    - when 3
+                      p Let's send and receive characters!
+                    - when 4
+                      p Let's send and receive images!
+                    - when 5
+                      p Complete the message board!
+              .card__descrioption
+                = lesson.description
+            .card__illust
+              = image_tag("lesson_#{lesson.number}.png", class: "", width: 212, alt: "レッスン#{lesson.number}")
+          .card__bottomArea
+            .bottomArea__stageProgress
+              p
+              span.bi.bi-trophy-fill.icon
+              span ステージ #{@workspace_counts[lesson.id] || 0}/#{@stage_counts[lesson.id]}
+            .bottomArea__btns
+              = react_component "lessons/BeforeLessonModal", lessonId: lesson.number, classname: "bottomArea__subBtn lesson#{lesson.number}"
+#root
+  = javascript_pack_tag "application"

@@ -1,0 +1,79 @@
+@import 'common/styles/variables.scss';
+.buttonArea {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  width: 48%;
+  min-height: 40px;
+  background: #fff;
+}
+
+.executionButton {
+  color: #fff;
+  &[disabled] {
+    border: 1px solid $gray-2;
+    background: $gray-2;
+    color: $black;
+  }
+}
+
+.lesson1Execute {
+  background: $lesson-1-primary;    
+}
+.lesson2Execute {
+  background: $lesson-2-primary;    
+}
+.lesson3Execute {
+  background: $lesson-3-primary;    
+}
+.lesson4Execute {
+  background: $lesson-4-primary;    
+}
+.lesson5Execute {
+  background: $lesson-5-primary;    
+}
+
+.lesson1Reset {
+  border:1px solid $lesson-1-primary;
+  color: $lesson-1-primary;
+}
+.lesson2Reset {
+  border:1px solid $lesson-2-primary;
+  color: $lesson-2-primary;
+}
+.lesson3Reset {
+  border:1px solid $lesson-3-primary;
+  color: $lesson-3-primary;
+}
+.lesson4Reset {
+  border:1px solid $lesson-4-primary;
+  color: $lesson-4-primary;
+}
+.lesson5Reset {
+  border:1px solid $lesson-5-primary;
+  color: $lesson-5-primary;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.resetButton {
+  &[disabled] {
+    border: 1px solid $gray-2;
+    background: $gray-2;
+    color: $black;
+  }
+}

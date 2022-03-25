@@ -1,0 +1,26 @@
+@import 'common/styles/variables.scss';
+.bgGray {
+  background: $gray-1;
+  padding: $space-m;
+  border-bottom: 1px solid #e6e6e6;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+.removeButton {
+  background: $gray-2;
+  box-shadow: none;
+  padding: $space-s $space-m;
+  border: none;
+  outline: none;
+  font-size: $font-size-xs;
+  border-radius: 100px;
+  cursor: pointer;
+  &:hover {
+    background: $gray-3;
+  }
+}

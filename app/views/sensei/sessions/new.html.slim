@@ -1,0 +1,25 @@
+.container__main
+  .container-inner.single-contents
+    p.logo
+      = link_to(image_tag("logo.png", class: "", alt: "プログル"), "/")
+    .base-form
+      = form_for(:session, url: sensei_session_path) do |form|
+        .base-form__field
+          = form.label :email
+          = form.text_field :email, type: "email"
+        .base-form__field
+          = form.label :password
+          = form.password_field :password
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="password_display")
+        .base-form__field
+          = link_to t(".forgot_password"), new_sensei_password_path
+        .base-form__field
+          = form.submit "ログインする", class: "button button--primary"
+        .base-form__field
+          = link_to "アカウントをまだ作成していない方はこちら", sensei_sign_up_path
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "password_display", \
+    password_form_id: "session_password" \
+  }

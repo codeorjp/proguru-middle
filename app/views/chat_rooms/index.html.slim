@@ -1,0 +1,9 @@
+#root
+  = javascript_pack_tag "application"
+  = react_component "chat_rooms/App",
+    userId: current_student.id,
+    design: @design,
+    block: @block,
+    nickName: current_student.nickname,
+    studentNumber: current_student.number,
+    userIcon: image_path("/images/#{current_student.icon}.png")

@@ -1,0 +1,46 @@
+.container__main#sensei-class-page
+  .container-inner
+    - if @class_rooms.blank?
+      .container-inner__first-user
+        h2.first-user__title はじめて授業を開始される方へ
+        p.first-user__detail はじめにクラスの登録をします。クラスを登録することで生徒数分のアカウントが作成され，授業で使う生徒アカウントが作成されます。
+        = link_to new_sensei_class_room_path, class: "button button--primary"
+          span クラスを登録する
+    div
+      h2.h2-title
+        p.h2-title__text クラス一覧
+        = link_to new_sensei_class_room_path, class: "h2-title__button button button--secondary"
+          span クラスを登録する
+      .class-list
+        - @class_rooms.each do |class_room|
+          .class-list-item
+            .class-list-item__title
+              div
+                p.class-list-item__id = t("views.shared.class_id", id: class_room.id)
+                p.class-list-item__year = t("views.shared.class_year", year: class_room.school_year)
+                p.class-list-item__name = class_room.name
+                p.class-list-item__student = "生徒 #{@student_counts[class_room.id]} 名"
+              .icon-btn
+                = link_to edit_sensei_class_room_path(class_room), title: "編集"
+                  i.bi.bi-pencil-fill
+                = link_to sensei_class_room_path(class_room), title: "削除", method: :delete, \
+                        data: { confirm: t("views.default.destroy_confirm") }
+                  i.bi.bi-trash-fill
+            .class-list-item__buttons
+              = link_to sensei_class_room_students_path(class_room), class: "class-list-item__button button button--secondary"
+                span.bi.bi-people-fill.icon
+                span 生徒一覧を見る
+              = link_to sensei_message_board_path(class_room.message_boards.last), class: "class-list-item__button button button--secondary"
+                span.bi.bi-chat-dots-fill.icon
+                span チャットを見る
+              - if class_room.term.present?
+                = link_to edit_sensei_class_room_terms_path(class_room), class: "class-list-item__button button button--secondary"
+                  span.bi.bi-file-earmark-text-fill.icon
+                  span チャットの利用規約を編集する
+              - else
+                = link_to new_sensei_class_room_terms_path(class_room), class: "class-list-item__button button button--secondary"
+                  span.bi.bi-file-earmark-text-fill.icon
+                  span チャットの利用規約を入力する
+              = link_to sensei_class_room_terms_path(class_room), class: "class-list-item__button button button--secondary"
+                span.bi.bi-file-earmark-text-fill.icon
+                span チャットの利用規約を見る

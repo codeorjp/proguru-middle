@@ -1,0 +1,12 @@
+#root
+  = javascript_pack_tag "application"
+  = react_component "lesson#{@lesson.number}/App",
+    userId: current_student.id,
+    lessonId: @lesson.number,
+    stageId: @stage.number,
+    lesson: @lesson,
+    stage: @stage,
+    submittedWorkspace: @workspace,
+    nickName: current_student.nickname,
+    studentNumber: current_student.number,
+    userIcon: image_path("/images/#{current_student.icon}.png")

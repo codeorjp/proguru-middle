@@ -1,0 +1,477 @@
+.l-container
+  header#js-header.l-header
+    .l-header__inner
+      .l-header__logo
+        h1.logo
+          a href="/"
+            = image_tag("img/commons/logo.svg", alt: "プログル", height: "39", width: "140")
+        p.tagline 授業で使えるプログラミング教材
+      nav#js-globalNav.globalNav
+        p.globalNav__menu
+          button#js-menuButton.menuButton type="button"
+            span MENU
+        #js-globalNavList.globalNav__inner
+          ul.globalNav__list
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#about"  プログル技術とは
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#lesson"  レッスン紹介
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#howtouse"  利用方法
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#plan"  指導案
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#voice"  先生の声
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#training"  研修資料
+            li.globalNav__item
+              a.globalNav__link.js-anchor href="#contact"  お問い合わせ
+            li.globalNav__item
+              button#js-globalSubNav.globalNav__button.-primary type="button"
+                | 会員メニュー
+                i.fas.fa-chevron-down
+              #accountMenu.globalSubNav
+                .globalSubNav__block
+                  .globalSubNav__title
+                    i.fas.fa-user-tie
+                    | 先生
+                  ul.globalSubNav__list
+                    li.globalSubNav__item
+                      = link_to "アカウントを作成", sensei_sign_up_path
+                    li.globalSubNav__item
+                      = link_to "ログインする", sensei_sign_in_path
+                .globalSubNav__block
+                  .globalSubNav__title
+                    i.fas.fa-user
+                    | 生徒
+                  ul.globalSubNav__list
+                    li.globalSubNav__item
+                      = link_to "アカウントを作成", sign_up_path
+                    li.globalSubNav__item
+                      = link_to "ログインする", sign_in_path
+            li.globalNav__item
+              = link_to "お試しレッスン", trial_index_path, class: "globalNav__button -secondary"
+  main.l-main
+    section.mainVisual
+      .mainVisual__inner
+        h2.mainVisual__title
+          = image_tag("img/commons/logo_proguru_tech.svg", alt: "プログル技術", height: "74", width: "400")
+        .mainVisual__description
+          p
+            | プログル技術は、中学校・技術で使える
+            br>/
+            | 「双方向性のあるコンテンツのプログラミング」に特化した教材です。
+      .mainVisual__bg
+        = image_tag("img/top/img_mainVisual.jpg", alt: "")
+      .mainVisual__content
+        h3.mainVisual__title.secondary-title
+          span プログル技術をはじめる
+        .login
+          .login__block.-tertiary
+            h4.login__title.-tertiary
+              i.fas.fa-user
+              | 先生
+            .login__buttons
+              p
+                = link_to sensei_sign_up_path, class: "button -tertiary"
+                  | 新規登録
+                  i.fas.fa-chevron-right
+              p
+                = link_to sensei_sign_in_path, class: "button -tertiary"
+                  | ログイン
+                  i.fas.fa-chevron-right
+          .login__block.-primary
+            h4.login__title.-primary
+              i.fas.fa-user
+              | 生徒
+            .login__buttons
+              p
+                = link_to sign_up_path, class: "button -primary"
+                  | 新規登録
+                  i.fas.fa-chevron-right
+              p
+                = link_to sign_in_path, class: "button -primary"
+                  | ログイン
+                  i.fas.fa-chevron-right
+          .login__block.-secondary
+            h4.login__title.-secondary お試しレッスン
+            .login__buttons
+              p
+                = link_to trial_index_path, class: "button -secondary"
+                  | お試しレッスン
+                  i.fas.fa-chevron-right
+    .sections
+      section#about.section
+        h2.primary-title
+          span プログル技術とは
+        .excerpt
+          p
+            | プログル技術は、中学校・技術で使える
+            br/
+            | 「双方向性のあるコンテンツのプログラミング」に特化した無償のプログラミング教材です。
+            br/
+            | 小学校向けプログルの開発・運用経験を活かし、全国の学校で実践できるよう
+            br/
+            | 生徒の取り組みやすさと先生の指導しやすさを両立させた教材を開発しました。
+        .section__description
+          .columns.is-vcentered.is-row-reversed
+            .column.is-7
+              figure.thumbnail.-full
+                = image_tag("img/top/img_about_02.jpg", width: "1200")
+            .column.is-5
+              .description
+                p
+                  | プログル技術は、ドリル型の学習教材です。
+                  br/
+                  | 教材は全部で5つのレッスンで構成されており、各レッスンがそれぞれ
+                  | 1コマの授業で扱いやすい分量にまとまっています。
+                  br/
+                  | 1つ1つの学習課題や、最終的な学習のゴールも明確で
+                  | 生徒たちが自分たちの力で取り組むことができるため、
+                  | 不安がある先生方も安心して指導することができます。
+          .columns.is-vcentered
+            .column.is-7
+              figure.thumbnail.-full
+                = image_tag("img/top/img_about_01.jpg", width: "1200")
+            .column.is-5
+              .description
+                p
+                  | 生徒たちは、全レッスンを通して、今や子どもたちにも身近なツールになった
+                  | チャットアプリを制作します。
+                  br/
+                  | 各レッスンは、プログラミングだけではなく、デザイン・サーバ通信の概念・
+                  | セキュリティ・マルチメディアの取り扱いなど、情報化社会で生活する上で
+                  | 必要になる考え方を、自然と身に付けることができるように設計されています。
+      section#lesson.section
+        h2.primary-title
+          span レッスン紹介
+        .l-inner
+          .description.-center
+            p チャットができるクラス伝言板システムを作ろう！
+          .lesson
+            .lesson__flow
+              .columns
+                .column
+                  a.js-anchor href="#lesson01"
+                    figure.thumbnail
+                      = image_tag("img/top/icon_lesson_01.png", alt: "")
+                      figcaption レッスン1
+                .column
+                  a.js-anchor href="#lesson02"
+                    figure.thumbnail
+                      = image_tag("img/top/icon_lesson_02.png", alt: "")
+                      figcaption レッスン2
+                .column
+                  a.js-anchor href="#lesson03"
+                    figure.thumbnail
+                      = image_tag("img/top/icon_lesson_03.png", alt: "")
+                      figcaption レッスン3
+                .column
+                  a.js-anchor href="#lesson04"
+                    figure.thumbnail
+                      = image_tag("img/top/icon_lesson_04.png", alt: "")
+                      figcaption レッスン4
+                .column
+                  a.js-anchor href="#lesson05"
+                    figure.thumbnail
+                      = image_tag("img/top/icon_lesson_05.png", alt: "")
+                      figcaption レッスン5
+            .lesson__list
+              #lesson01.lesson__item
+                .columns.is-4.is-vcentered
+                  .column
+                    figure.lesson__thumb
+                      = image_tag("img/top/img_lesson_01.png", alt: "")
+                      figcaption.lesson__icon Lesson1
+                  .column
+                    h3.secondary-title チャット画面をデザインしよう!
+                    .description
+                      p
+                        | デザイナーが実際に使うツールを意識した
+                        | インターフェースを用いて、チャットのデ
+                        | ザインを学びます。ユニバーサルデザイン
+                        | を意識しながら画面作りが可能です。
+              #lesson02.lesson__item
+                .columns.is-4.is-vcentered
+                  .column
+                    figure.lesson__thumb
+                      = image_tag("img/top/img_lesson_02.png", alt: "")
+                      figcaption.lesson__icon Lesson2
+                  .column
+                    h3.secondary-title サーバと通信しよう！
+                    .description
+                      p
+                        | チャットの裏側にある、サーバと自分の端
+                        | 末とのネットワーク接続の流れを、分かり
+                        | やすいイラストと共に学習することができます。
+              #lesson03.lesson__item
+                .columns.is-4.is-vcentered
+                  .column
+                    figure.lesson__thumb
+                      = image_tag("img/top/img_lesson_03.png", alt: "")
+                      figcaption.lesson__icon Lesson3
+                  .column
+                    h3.secondary-title 文字を送受信しよう！
+                    .description
+                      p
+                        | チャットで文字を送受信するために必要な
+                        | プログラミングを、ステップ・バイ・ステッ
+                        | プで学んでいきます。
+              #lesson04.lesson__item
+                .columns.is-4.is-vcentered
+                  .column
+                    figure.lesson__thumb
+                      = image_tag("img/top/img_lesson_04.png", alt: "")
+                      figcaption.lesson__icon Lesson4
+                  .column
+                    h3.secondary-title 画像を送受信しよう！
+                    .description
+                      p
+                        | 画像の大きさ・画質などを考えなが
+                        | ら、画像の送受信に必要なプログラミング
+                        | を学びます。文字に加えて画像を扱えるよ
+                        | うにすることで、よりコミュニケーション
+                        | が円滑になることを体感できます。
+              #lesson05.lesson__item
+                .columns.is-4.is-vcentered
+                  .column
+                    figure.lesson__thumb
+                      = image_tag("img/top/img_lesson_05.png", alt: "")
+                      figcaption.lesson__icon Lesson5
+                  .column
+                    h3.secondary-title チャットを完成させよう！
+                    .description
+                      p
+                        | 全レッスンの内容をふまえて、自由にデザ
+                        | インやプログラミングを行い、自分だけの
+                        | オリジナルチャットを作ることができます。
+      section#howtouse.section
+        h2.primary-title
+          span 利用方法
+        .l-inner
+          .columns.is-vcentered
+            .column
+              figure.thumbnail
+                = image_tag("img/top/img_howtouse_01.png", alt: "")
+            .column
+              h3.secondary-title 1. 先生のアカウントを登録する
+              .description
+                p
+                  | 先生のアカウント登録ページから、先生のお名前・
+                  | メールアドレス・パスワード等必要事項を記入し、登録を完了させてください。
+                p
+                  = link_to "アカウント登録", sensei_sign_up_path, class: "button -primary -bg"
+          .columns.is-vcentered
+            .column
+              figure.thumbnail
+                = image_tag("img/top/img_howtouse_02.png", alt: "")
+            .column
+              h3.secondary-title 2. 先生の管理画面にログインする
+              .description
+                p
+                  | 先生アカウントの登録が完了したら、先生の管理画面
+                  | にログインしてください。
+                p
+                  = link_to "ログイン", sensei_sign_in_path, class: "button -primary -bg"
+          .columns.is-vcentered
+            .column
+              figure.thumbnail
+                = image_tag("img/top/img_howtouse_03.png", alt: "")
+            .column
+              h3.secondary-title 3. クラスを登録する
+              .description
+                p
+                  | 先生の管理画面にログインしたら、プログル技術を利用するクラスの情報を登録してください。
+                  | ここで入力した人数分、生徒用のアカウントが発行されます。
+          .columns.is-vcentered
+            .column
+              figure.thumbnail
+                = image_tag("img/top/img_howtouse_04.png", alt: "")
+            .column
+              h3.secondary-title 4. 生徒ログイン情報を準備する
+              .description
+                p
+                  | 生徒が各々のアカウントを利用するために必要な情報を準備し、授業時に配布してください。
+                  | 必要情報をまとめて印刷する機能もありますので、ぜひご活用ください。
+                p
+                  a.button.-primary.-bg href="https://storage.googleapis.com/proguru-secondary-production/teacher_manual.pdf" data-analytics="teacher_manual_download" target="_blank"
+                    i.fas.fa-download
+                    | 教員用マニュアルをダウンロード
+      section#plan.section
+        h2.primary-title
+          span 指導案・評価の観点
+        .l-inner
+          .columns
+            .column.is-4
+              figure.thumbnail
+                = image_tag("img/top/img_plan_01.jpg", class: "border-radius", alt: "", width: "400")
+            .column.is-8
+              .description
+                h3.secondary-title 指導案
+                p
+                  | プログル技術を利用した授業の指導案をご用意しました。「双方向性のあるコンテンツとは何か？」
+                  | といった導入部分や、課題解決のまとめに関する部分も含まれています。
+                  br/
+                  | また、プログラミング指導の経験が浅い先生にもわかりやすくご指導していただくための資料も用意しました。これで50分授業の流れが把握しやすくなります。
+                .columns
+                  .column.is-narrow
+                    a.button.-primary.-bg.-medium href="https://storage.googleapis.com/proguru-secondary-production/lesson_plan.pdf" data-analytics="lesson_plan_download" target="_blank"
+                      i.fas.fa-download
+                      | 指導案をダウンロード
+                h3.secondary-title 授業スライド
+                p
+                  | 教室のスクリーンやTV画面などに投影して使っていただく授業スライドも必要に応じてご活用ください。
+                p
+                  a.button.-primary.-bg.-medium. href="https://storage.googleapis.com/proguru-secondary-production/lecture_slide.pdf" data-analytics="lecture_slide_download" target="_blank"
+                    i.fas.fa-download
+                    | 授業スライドをダウンロード
+                h3.secondary-title ワークシート
+                p
+                  | 上記、指導案の内容に沿ったワークシートです。教材に出てくる操作の手順や、語句の整理、生徒の考えを記入する欄などを用意しました。
+                p
+                  a.button.-primary.-bg.-medium. href="https://storage.googleapis.com/proguru-secondary-production/worksheet.pdf" data-analytics="worksheet_download" target="_blank"
+                    i.fas.fa-download
+                    | ワークシートをダウンロード
+                h3.secondary-title 評価のサポート
+                p
+                  | プログル技術では、先生用管理画面をご用意しました。この画面では、生徒のアカウント管理だけではなく、課題の提出状況や、内容も確認できます。
+                  | 授業中だけでは見取ることのできない課題を授業後に確認・評価することができます。
+      section#voice.section
+        h2.primary-title
+          span 先生の声
+        .l-inner
+          .columns
+            .column
+              .card
+                .card__header
+                  .card__heading
+                    h3.secondary-title 松原 清美
+                    p
+                      small 石川県加賀市立山中中学校 教頭
+                .card__description
+                  p
+                    | このプログル技術は、授業の流れを理解しておけば、免許外の先生にも指導しやすい教材だと思います。
+                    br/
+                    | 生徒にとっても教材の流れが明確で、ステージを1つ行えば次々と自分で進めることができました。
+                    | ステージごとに確認しながら先生に課題提出するので、満足感や達成感もありドリル形式は良いと思いました。
+                    br/
+                    | 教師用の管理画面は非常に魅力で、授業後に点検を行えるのは良いと思います。
+            .column
+              .card
+                .card__header
+                  figure.card__thumbnail
+                    = image_tag("img/top/sengoku.png", alt: "千石 一朗　プロフィール写真")
+                  .card__heading
+                    h3.secondary-title 千石 一朗
+                    p
+                      small みんなのコード 学校教育支援部 講師
+                .card__description
+                  p
+                    | 新たに始まる「双方向性のあるコンテンツに関するプログラミング」の学習を環境に関わらず子どもたちに届けるためにこの教材を準備しました。
+                    br/
+                    | 自分たちが普段スマートフォンなどで利用しているチャットツールがどのように動いているのか？
+                    | 作られているのか？利用者としての視点だけでなく開発者の視点で見ることができたら、子どもたちの可能性は大きく広がると思います。
+      section#training.section
+        h2.primary-title
+          span 研修資料
+        .excerpt
+          p
+            | みんなのコードで実施しているプログラミング研修会の内容を
+            br/
+            | ダイジェスト版として自習形式にまとめました。
+            br/
+            | それぞれ10~45分程度の動画や課題があります。
+            br/
+            | ご自身のペースでご活用下さい。
+          div(style="text-align: left; display: inline-block; font-size: 16px; margin-top: 32px;")
+            p
+              span(style="display: inline-block; margin-right: 12px;") 1.
+              a href="https://codeorjp.github.io/lesson1" style="text-decoration: underline; color: #1155CC;" data-analytics="training_material_lesson1_download" target="_blank" 新学習指導要領の理解
+              span （約43分）
+            p
+              span(style="display: inline-block; margin-right: 12px;") 2.
+              a href="https://codeorjp.github.io/lesson2" style="text-decoration: underline; color: #1155CC;" data-analytics="training_material_lesson2_download" target="_blank" 小中高を通したプログラミング
+              span （約28分）
+            p
+              span(style="display: inline-block; margin-right: 12px;") 3.
+              a href="https://codeorjp.github.io/lesson3" style="text-decoration: underline; color: #1155CC;" data-analytics="training_material_lesson3_download" target="_blank" プログラミング導入の背景
+              span （約28分）
+            p
+              span(style="display: inline-block; margin-right: 12px;") 4.
+              a href="https://codeorjp.github.io/lesson4" style="text-decoration: underline; color: #1155CC;" data-analytics="training_material_lesson4_download" target="_blank" プログル技術_準備編
+              span （約26分）
+            p
+              span(style="display: inline-block; margin-right: 12px;") 5.
+              a href="https://codeorjp.github.io/lesson5" style="text-decoration: underline; color: #1155CC;" data-analytics="training_material_lesson5_download" target="_blank" プログル技術_授業での活用編
+              span （約11分）
+      section#contact.section
+        h2.primary-title
+          span お問い合わせ
+        .l-inner
+          .description.-center
+            h3.secondary-title よくあるお問い合わせ
+          .description
+            dl(style="margin-bottom: 16px; font-size: 16px;")
+              dt(style="color: red;") Q. 画面スクリーンショットやサイトURLを使用する際の注意点はありますか？
+              dd A. 研修会や学校内での使用など、営利目的でない活動における利用に関しては許諾の必要はございません。
+              dt(style="color: red;") Q. どこまで無償で利用できるのですか？
+              dd A. 授業で使用するWeb教材及び指導案・授業スライド・ワークシート等、全て無償でご利用できます。利用される学校及び生徒より、利用料金はいただいておりません。
+              dt(style="color: red;") Q. 動作環境を教えてください。
+              dd
+                | A. 以下のブラウザで動作確認を行っております。うまく動作しない場合は、使用機器・ブラウザの情報をお知らせください。
+                p Internet Explorer 11、最新版のMicrosoft Edge・Google Chrome・Safari(iPad含む)
+              dt(style="color: red;") Q. レッスン4のステージで、プログラム実行時に画像が表示されない事象が発生した場合の解決方法はありますか？
+              dd A. ブラウザのキャッシュが原因かもしれません。ブラウザのキャッシュをクリアしてみてください。
+          .description.-center
+            p
+              | プログルを使ってみてのご感想・ご要望や利用する上でのご質問などございましたら
+              br>/
+              | 以下のフォームよりご記入ください。
+            p
+              a.button.-primary.-bg.-medium href="https://forms.gle/RgmzXnQRu5XqgL3x6" target="_blank"
+                i.fas.fa-envelope
+                | お問い合わせフォームへ
+      section#supporter.section
+        h2.primary-title
+          span サポーター
+        .l-inner
+          .columns
+            .column(style="display: flex; align-items: center; justify-content: center")
+              = image_tag("img/top/supporter/google.png", alt: "Google.orgのロゴ")
+            .column(style="display: flex; align-items: center; justify-content: center")
+              = image_tag("img/top/supporter/iodata.png", alt: "I-O DATAのロゴ")
+  footer.l-footer
+    .information
+      .information__title
+        p
+          = image_tag("img/commons/logo_code.svg", width: "200", alt: "")
+        p 特定非営利活動法人みんなのコード
+      .information__description
+        p
+          | ミッション： すべての子どもがプログラミングを楽しむ国にする
+          br/
+          | 設立：2015年7月
+          br/
+          | 代表理事：利根川 裕太
+          br/
+          | 〒150-0031 東京都渋谷区桜丘町4-17 PORTAL Apartment & Art POINT 102
+          br/
+          | info@code.or.jp
+          br/
+    .l-footer__inner
+      nav.footerNav
+        ul.footerNav__list
+          li.footerNav__item
+            a href="https://proguru.jp/" target="_blank"
+              i.fas.fa-chevron-right
+              | 小学校版プログル
+          li.footerNav__item
+            a href="https://code.or.jp/" target="_blank"
+              i.fas.fa-chevron-right
+              | 運営会社
+          li.footerNav__item
+            a href="https://storage.googleapis.com/proguru-secondary-production/policy.pdf" target="_blank"
+              i.fas.fa-chevron-right
+              | 利用規約
+      p.copyright
+        small Copyright © みんなのコード All rights reserved.

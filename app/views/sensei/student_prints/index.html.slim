@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta content="text/html" charset="UTF-8" http-equiv="Content-Type"
+    title プログル技術
+    = stylesheet_link_tag "sensei/student_prints"
+    = stylesheet_link_tag "sensei/student_prints", media: "print"
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag "favicon.ico"
+  body
+    h1
+      = link_to sensei_class_room_students_path(@class_room)
+        span = @class_room.name
+    h3
+      = link_to sensei_class_room_student_prints_path(@class_room.id, format: :csv)
+        span 初期パスワード一覧のCSVファイルをダウンロードする
+
+    .container
+      table
+        - while @students.present?
+          tr
+            - @students.shift(3).each do |student|
+              td.item
+                table
+                  thead
+                    th クラスID
+                    th 出席番号
+                    th 初期パスワード
+                  tbody
+                    tr.
+                      td = student.class_room_id
+                      td = student.number
+                      td = student.initial_token

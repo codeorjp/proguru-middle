@@ -1,0 +1,18 @@
+.container__main
+  .container-inner.single-contents
+    h2 = t(".title")
+    .base-form
+      = form_with(model: [:sensei, @teacher], method: "patch", url: sensei_teacher_email_path(@teacher), local: true) do |form|
+        - if @teacher.errors.any?
+          #error_explanation
+            h2
+              | 入力項目に#{@teacher.errors.count}件のエラーがあります
+            ul
+              - @teacher.errors.full_messages.each do |message|
+                li
+                  = message
+        .base-form__field
+          = form.label :email
+          = form.text_field :email
+        .base-form__field
+          = form.submit "登録する", class: "button button--primary"

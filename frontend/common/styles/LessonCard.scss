@@ -1,0 +1,19 @@
+.card {
+  background: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.cardNoPadding {
+  padding: 0;
+}
+.cardFullHeight {
+  height: 100%;
+}

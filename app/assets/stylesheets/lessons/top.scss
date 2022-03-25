@@ -1,0 +1,255 @@
+@import "../variables";
+
+@mixin lessonMainBtn($lessonNum: 1) {
+  background: map-get($primaryColors, $lessonNum);
+  &:hover {
+    background: map-get($hoverColors, $lessonNum);
+  }
+}
+
+@mixin lessonSubBtn($lessonNum: 1) {
+  color: map-get($primaryColors, $lessonNum);
+  border-color: map-get($primaryColors, $lessonNum);
+  &:hover {
+    color: #fff;
+    background: map-get($primaryColors, $lessonNum);
+  }
+}
+
+@mixin lessonNum($lessonNum: 1) {
+  font-size: 90px;
+  color: map-get($secondaryColors, $lessonNum);
+  line-height: 0.8;
+  margin-right: 20px;
+}
+
+@mixin lessonTitle($lessonNum: 1) {
+  display: inline-block;
+  color: map-get($primaryColors, $lessonNum);
+  padding: 4px 20px;
+  background: map-get($secondaryColors, $lessonNum);
+  border-radius: 100px;
+}
+
+.top {
+  background: $bg-gray;
+  font-weight: bold;
+
+  &__header {
+    background: #fff;
+    .header {
+      &__wrap {
+        text-align: center;
+        padding-top: 40px;
+        width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
+      &__title {
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        p {
+          margin: 0;
+          font-size: 28px;
+          letter-spacing: 1.3px;
+        }
+        h1 {
+          font-size: 14px;
+          color: #747474;
+          margin-top: 5px;
+          letter-spacing: 1.6px;
+        }
+      }
+      &__image {
+        height: 249px;
+      }
+      &__dots {
+      }
+    }
+  }
+  &__lesson {
+    width: 740px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  &__card {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 14px rgba(80, 80, 80, 0.22);
+    transition: all 0.1s linear;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    .card {
+      &__innerWrap {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dedede;
+        padding: 20px 20px 10px;
+      }
+      &__messageBoard {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 4px solid #C1C1C1;
+        border-radius: 10px;
+        &.--finish {
+          border: 4px solid #FF9900;
+          background-image: url(/assets/message_board_finish_bg.png);
+          background-size: cover;
+          p {
+            margin-bottom: 10px;
+          }
+        }
+        p {
+          font-size: 20px;
+          font-weight: normal;
+          margin: 0;
+        }
+        .subtext {
+          font-size: 16px;
+          font-weight: normal;
+          margin-bottom: 10px;
+        }
+      }
+      &__messageMain {
+        text-align: center;
+      }
+      &__titleArea {
+        display: flex;
+        .title {
+          &__bgNum {
+            &.lesson1 {
+              @include lessonNum(1);
+            }
+            &.lesson2 {
+              @include lessonNum(2);
+            }
+            &.lesson3 {
+              @include lessonNum(3);
+            }
+            &.lesson4 {
+              @include lessonNum(4);
+            }
+            &.lesson5 {
+              @include lessonNum(5);
+            }
+          }
+          &__num {
+            &.lesson1 {
+              @include lessonTitle(1);
+            }
+            &.lesson2 {
+              @include lessonTitle(2);
+            }
+            &.lesson3 {
+              @include lessonTitle(3);
+            }
+            &.lesson4 {
+              @include lessonTitle(4);
+            }
+            &.lesson5 {
+              @include lessonTitle(5);
+            }
+          }
+          &__name {
+            margin: 10px 0 0;
+            font-size: 24px;
+          }
+          &__detail {
+            p {
+              margin: 0;
+              font-size: 14px;
+              color: #a7a7a7;
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+      &__descrioption {
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      &__bottomArea {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        .bottomArea {
+          &__stageProgress {
+            background: $light-accent-color;
+            color: $accent-text-color;
+            border-radius: 4px;
+            padding: 10px;
+            p {
+              display: flex;
+              align-items: center;
+              margin: 0;
+            }
+            .icon {
+              font-size: 18px;
+              margin-right: 8px;
+            }
+          }
+          &__btns {
+            display: flex;
+            & > * {
+              margin-left: 10px;
+            }
+          }
+          &__mainBtn {
+            background: #ccc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 10px 0;
+            min-width: 230px;
+            text-align: center;
+            text-decoration: none;
+            &.lesson1 {
+              @include lessonMainBtn(1);
+            }
+            &.lesson2 {
+              @include lessonMainBtn(2);
+            }
+            &.lesson3 {
+              @include lessonMainBtn(3);
+            }
+            &.lesson4 {
+              @include lessonMainBtn(4);
+            }
+            &.lesson5 {
+              @include lessonMainBtn(5);
+            }
+          }
+          &__subBtn {
+            background: #fff;
+            border: 1px solid;
+            border-radius: 4px;
+            padding: 10px 0;
+            min-width: 230px;
+            text-align: center;
+            text-decoration: none;
+            &.lesson1 {
+              @include lessonSubBtn(1);
+            }
+            &.lesson2 {
+              @include lessonSubBtn(2);
+            }
+            &.lesson3 {
+              @include lessonSubBtn(3);
+            }
+            &.lesson4 {
+              @include lessonSubBtn(4);
+            }
+            &.lesson5 {
+              @include lessonSubBtn(5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.container__main
+  .container-inner
+    div
+      h2.h2-title
+        .h2-title__text.class-item
+          div
+            p.class-item__id = t("views.shared.class_id", id: @class_room.id)
+          .class-item__title
+            p.class-item__year = t("views.shared.class_year", year: @class_room.school_year)
+            p.class-item__name = "#{@class_room.name}の生徒一覧"
+        .h2-title__buttons
+          = link_to sensei_class_room_stages_path(@class_room.id), class: "h2-title__button button button--secondary"
+            span 課題一覧
+          = link_to sensei_class_room_student_prints_path(@class_room.id), class: "h2-title__button button button--secondary", media: "print"
+            span 初期パスワードを印刷する
+          = link_to sensei_message_board_path(@class_room.message_boards.performance.last), class: "h2-title__button button button--secondary"
+            span クラスのチャットを見る
+          = link_to new_sensei_class_room_student_path(@class_room.id), class: "h2-title__button button button--secondary"
+            span 生徒を登録する
+    div
+      table.app-table
+        thead.app-table__head
+          th 出席番号
+          th ニックネーム
+          th 進捗管理
+          th 設定キーワード一覧
+          th 初期パスワード
+          th 生徒の状態
+          th ロック
+          th 編集
+          th 削除
+        tbody.app-table__body
+          - @students.each do |student|
+            tr
+              td = student.number
+              td = student.nickname
+              td
+                = link_to "確認する", sensei_student_workspaces_path(student),\
+                                class: "app-table-body__button button button--secondary"
+              td
+                = link_to "確認する", sensei_student_keywords_path(student),\
+                                class: "app-table-body__button button button--secondary"
+              td
+                - if student.created?
+                  p = student.initial_token
+                - else
+                  = link_to "リセットする", sensei_student_reset_path(student), method: :post,\
+                                  class: "app-table-body__button button button--secondary"
+              td
+                p = "#{t("students.status.#{student.status}")}"
+              td
+                - if student.account_locked?
+                  = link_to sensei_student_unlock_path(student), method: :post, class: "app-table-body__icon-lock-link" do
+                    span.app-table-body__icon-lock.-lock
+                      i.bi.bi-lock-fill
+                - else
+                  span.app-table-body__icon-lock.-unlock
+                    i.bi.bi-unlock-fill
+              td.icon-btn
+                = link_to edit_sensei_student_path(student), title: "編集"
+                  i.bi.bi-pencil-fill
+              td.icon-btn
+                = link_to sensei_student_path(student), title: "削除", method: :delete, \
+                                data: { confirm: t("views.default.destroy_confirm") }
+                  i.bi.bi-trash-fill

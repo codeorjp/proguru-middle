@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Send Profile Icon render SendProfileIcon 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "borderWidth": "1px",
+        "height": "200px",
+        "width": "200px",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Send Profile Icon set background: #00ff00 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    style={
+      Object {
+        "background": "#00ff00",
+        "borderRadius": "",
+        "borderWidth": "1px",
+        "height": "200px",
+        "width": "200px",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Send Profile Icon set border-color: #A5A5A5, border-style: solid, boder-width: 1px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    style={
+      Object {
+        "background": "#fff",
+        "borderColor": "#A5A5A5",
+        "borderRadius": "",
+        "borderStyle": "solid",
+        "borderWidth": "1px",
+        "height": "200px",
+        "width": "200px",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Send Profile Icon set border-radius: 50px 50px 50px 50px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "50px 50px 50px 50px",
+        "borderWidth": "1px",
+        "height": "200px",
+        "width": "200px",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;
+
+exports[`Send Profile Icon set width: 70px, height: 70px 1`] = `
+<div
+  className="undefined undefined"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    style={
+      Object {
+        "background": "#fff",
+        "borderRadius": "",
+        "borderWidth": "1px",
+        "height": "70px",
+        "width": "70px",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="
+                undefined
+                null
+                undefined
+              "
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  />
+</div>
+`;

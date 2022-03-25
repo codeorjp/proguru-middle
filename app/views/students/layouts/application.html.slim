@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta content="text/html" charset="UTF-8" http-equiv="Content-Type"
+    title プログル技術
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag "favicon.ico"
+    = stylesheet_link_tag "sessions"
+    = stylesheet_link_tag "students"
+    = stylesheet_link_tag "lessons"
+    = javascript_include_tag "application"
+    = stylesheet_pack_tag "application"
+  body
+    .student-wrap
+      = render "students/layouts/header"
+      #flash
+        - flash.each do |key, value|
+          div id="#{key}"
+            = h value
+      - if current_page? chat_rooms_path
+        = yield
+      - else
+        .contentWrapper
+          = yield
+      footer.footer
+        p Copyright © みんなのコード All rights reserved.

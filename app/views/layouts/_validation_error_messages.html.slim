@@ -1,0 +1,8 @@
+- if model.errors.any?
+  #error_explanation
+    h2
+      | 入力項目に#{model.errors.count}件のエラーがあります
+    ul
+      - model.errors.full_messages.each do |message|
+        li
+          = message

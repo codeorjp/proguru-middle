@@ -1,0 +1,172 @@
+@import 'common/styles/variables.scss';
+
+.designUploadButton {
+  margin-left: 10px;
+  border: 0;
+  background: #FF9900;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 0.05s linear;
+  outline: 0;
+  &:hover {
+    background: rgb(220, 121, 0);
+  }
+}
+
+.blocklyUploadButton {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  width: 48%;
+  background: #FF9900;
+  color: #fff;
+  transition: all 0.05s linear;
+  &:hover {
+    background: rgb(220, 121, 0);
+  }
+}
+
+.buttonIcon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.modalTitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
+.modalSubTitle {
+  margin-top: 0;
+}
+
+.iconImage {
+  margin-right: 20px;
+}
+
+.titleArea {
+  padding: 20px;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.modalButtons {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #dcdcdc;
+}
+
+.secondarybutton {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  width: 48%;
+  border: $accent-color solid 1px;
+  background: #fff;
+  color: $accent-color;
+}
+
+.primarybutton {
+  width: 48%;
+  button {
+    cursor: pointer;
+    outline: none;
+    background: $accent-color;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 100%;
+    border: 0;
+    font-weight: bold;
+    &:disabled {
+      background: rgb(255, 196, 114);
+    }
+  }
+}
+
+.scrollableArea {
+  text-align: left;
+  padding: 20px;
+  flex: 1;
+  overflow: scroll;
+
+  p {
+    margin-top: 0px;
+  }
+}
+
+$iconColor: #FF9900;
+
+.checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: block;
+  margin: 0 0px 8px 0;
+  padding: 12px 12px 12px 42px;
+  border-radius: 8px;
+  background-color: #f6f7f8;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f3eee1;
+    &:after {
+      border-color: $iconColor;
+    }
+  }
+
+  &:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    display: block;
+    margin-top: -7px;
+    width: 5px;
+    height: 9px;
+    border-right: 3px solid $iconColor;
+    border-bottom: 3px solid $iconColor;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    input[type=checkbox]:checked + & {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    margin-top: -10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bbb;
+    border-radius: 6px;
+    content: '';
+  }
+}
+
+.modalLayout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

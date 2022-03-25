@@ -1,0 +1,11 @@
+#clearance.password-reset
+.container__main
+  .container-inner.single-contents
+    h2 = t(".title")
+    .base-form
+      = form_for :password, url: sensei_passwords_path do |form|
+        .base-form__field
+          = form.label :email
+          = form.text_field :email, type: "email"
+        .submit-field
+          = form.submit class: "button button--primary"

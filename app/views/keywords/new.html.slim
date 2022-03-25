@@ -1,0 +1,11 @@
+.sessions
+  .container__main
+    .container-inner.single-contents.textLeft
+      .container__header
+        h2 キーワード作成ページ
+        .container__header-right
+          = link_to "キーワード一覧を見る", keywords_path, class: "button button--primary"
+      = form_with( model: @keyword ,url: keywords_path, local: true) do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: @keyword }
+        = form.text_field :content, style: "margin-right: 12px;"
+        = form.submit

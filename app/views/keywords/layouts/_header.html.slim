@@ -1,0 +1,10 @@
+header#header
+  .header-wrapper
+    .header-wrapper__logoArea
+      p
+        = link_to image_tag("logo.png", height: "40px", class: "", alt: "プログル"), @current_student.present? ? lessons_path : root_path
+      - if @current_student.present? && @current_student.profiled?
+        = link_to lessons_path, class: "header-button"
+          = image_tag("home.png", height: "20px", alt: "ホーム")
+          span ホーム
+        = link_to "レッスン5-2に戻る", lesson_stage_path(lesson_number: 5, number: 2), class: "header-button margin-left-0"

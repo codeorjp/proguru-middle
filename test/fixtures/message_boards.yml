@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+lesson:
+  kind: :lesson
+  class_room: one
+
+performance:
+  kind: :performance
+  class_room: one
+
+another:
+  kind: :lesson
+  class_room: another

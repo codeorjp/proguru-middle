@@ -1,0 +1,37 @@
+.container__main
+  .container-inner.single-contents
+    p.logo
+      = link_to(image_tag("logo.png", class: "", alt: "プログル"), "/")
+    .password__description
+      ul
+        li パスワードには，半角の英字 (a~z, A~Z) や数字 (0~9) ，記号 (!, ?, & など) が使用できます
+        li 半角の英字・数字・記号の中から2種類以上を組み合わせて8文字以上のパスワードを設定してください
+    .base-form
+      = form_with(model: [:sensei, @teacher], local: true) do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: @teacher }
+        .base-form__field
+          = form.label :fullname
+          = form.text_field :fullname
+        .base-form__field
+          = form.label :email
+          = form.text_field :email, type: "email"
+        .base-form__field
+          = form.label :password
+          = form.password_field :password
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="password_display")
+        .base-form__checkbox
+          = form.check_box type="checkbox", required: true
+          = link_to "利用規約", "https://storage.googleapis.com/proguru-secondary-production/policy.pdf", target: :_blank, rel: "noopener noreferrer"
+          span および
+          = link_to "個人情報の取り扱いに関する事項", "https://storage.googleapis.com/proguru-secondary-production/privacy.pdf", target: :_blank, rel: "noopener noreferrer"
+          span に同意する
+        .base-form__field
+          = form.submit "アカウントを作成する", class: "button button--primary"
+        .other-links
+          = link_to "すでにアカウントをお持ちの方はこちら", sensei_sign_in_path
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "password_display", \
+    password_form_id: "teacher_password" \
+  }

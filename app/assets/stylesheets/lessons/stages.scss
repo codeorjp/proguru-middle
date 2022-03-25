@@ -1,0 +1,184 @@
+// Place all the styles related to the stages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./top";
+
+#root {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  & > div {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#header {
+  font-weight: bold;
+  padding: 0 20px;
+  border-bottom: 1px solid #dedede;
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logoArea {
+      display: flex;
+      align-items: center;
+    }
+    &__detail {
+      display: flex;
+      align-items: center;
+      background: $gray-1;
+      border-radius: 100px;
+      padding: 4px 16px;
+      margin-left: 20px;
+    }
+  }
+  .title-data {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header__right {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 20px;
+    justify-content: flex-end;
+    .current-page {
+      background-color: $main-color;
+      pointer-events: none;
+    }
+
+    &__link {
+      font-size: 14px;
+      border: 1px solid $gray-1;
+      padding: 6px 20px 4px;
+      margin: 0 4px;
+      border-radius: 100px;
+      text-decoration: none;
+      color: $black-1;
+      &:hover {
+        background: $gray-2;
+      }
+    }
+  }
+  .lesson-data {
+    display: flex;
+    align-items: center;
+    .lesson-title {
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 100px;
+      margin: 0 12px;
+      &.lesson1 {
+        color: $lesson-1-primary;
+        background: $lesson-1-secondary;
+      }
+      &.lesson2 {
+        color: $lesson-2-primary;
+        background: $lesson-2-secondary;
+      }
+      &.lesson3 {
+        color: $lesson-3-primary;
+        background: $lesson-3-secondary;
+      }
+      &.lesson4 {
+        color: $lesson-4-primary;
+        background: $lesson-4-secondary;
+      }
+      &.lesson5 {
+        color: $lesson-5-primary;
+        background: $lesson-5-secondary;
+      }
+    }
+    p {
+      color: #5f5f5f;
+    }
+  }
+  .header-button {
+    margin-left: 20px;
+    font-size: 14px;
+    border: 1px solid $gray-1;
+    padding: 6px 20px 4px;
+    border-radius: 100px;
+    text-decoration: none;
+    color: $black-1;
+    &:hover {
+      background: $gray-2;
+    }
+    &:visited,
+    &:hover {
+      color: $black-1;
+    }
+    img {
+      float: left;
+    }
+    span {
+      margin-left: 5px;
+    }
+  }
+  .stage-list {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    .stage {
+      p {
+        font-size: 10px;
+        margin: 0;
+      }
+    }
+  }
+  .stage-num {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: #DCDCDC;
+      background: $lesson-1-primary;
+      font-size: 0px;
+      min-width: 16px;
+      height: 16px;
+      border-radius: 100px;
+      margin-right: 10px;
+      &.lesson-current-page {
+        padding: 10px 12px;
+        font-size: 16px;
+        height: auto;
+        color: #444;
+      }
+      &.lesson-current-page.lesson-submitted {
+        color: #fff;
+      }
+      &.lesson-unsubmitted {
+        border: 2px solid #DCDCDC;
+        background: #fff;
+      }
+    }
+    a:hover {
+      background: #FF9900;
+    }
+  }
+}
+
+.student-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  background: #e9ebee;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  padding: 5px 0 10px;
+}
+
+.contentWrapper {
+  flex: 1 1 auto;
+}

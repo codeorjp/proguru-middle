@@ -1,0 +1,29 @@
+@import 'common/styles/messageBoard';
+
+// normalize入れておく
+.lessonCommon {
+  @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+  @import './variables.scss';
+  // base style
+  font-size: 14px;
+  font-weight: bold;
+  background: $lesson-bg;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #333;
+    background: none;
+  }
+
+  p {
+    margin: 0;
+  }
+}

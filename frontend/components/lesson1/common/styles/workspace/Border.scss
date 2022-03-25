@@ -1,0 +1,90 @@
+@import "common/styles/variables.scss";
+
+.flex {
+  display: flex;
+}
+
+.widthInput {
+  width: 80px;
+}
+
+.widthField {
+  margin-bottom: $space-m;
+}
+
+.borderField {
+  width: 190px;
+  height: 130px;
+  position: relative;
+}
+
+.centerRect {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  & > * {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+  }
+}
+.leftTop {
+  border-top: 2px solid $gray-2;
+  border-left: 2px solid $gray-2;
+  top: -1px;
+  left: -1px;
+}
+.rightTop {
+  border-top: 2px solid $gray-2;
+  border-right: 2px solid $gray-2;
+  top: -1px;
+  right: -1px;
+}
+.rightBottom {
+  border-bottom: 2px solid $gray-2;
+  border-right: 2px solid $gray-2;
+  bottom: -1px;
+  right: -1px;
+}
+.leftBottom {
+  border-bottom: 2px solid $gray-2;
+  border-left: 2px solid $gray-2;
+  bottom: -1px;
+  left: -1px;
+}
+
+.borderInput {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  margin: auto;
+  input {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.leftTopPos {
+  left: 0;
+  top: 0;
+}
+
+.rightTopPos {
+  right: 0;
+  top: 0;
+}
+
+.rightBottomPos {
+  right: 0;
+  bottom: 0;
+}
+
+.leftBottomPos {
+  bottom: 0;
+  left: 0;
+}

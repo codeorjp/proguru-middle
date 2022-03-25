@@ -1,0 +1,23 @@
+header#header
+  .header-wrapper
+    p
+      = link_to image_tag("logo.png", height: "40px", class: "", alt: "プログル"), @current_student.present? ? lessons_path : root_path
+    .title-data
+      .lesson-data
+        = link_to lessons_path, class: "header-button"
+          = image_tag("home.png", height: "20px", alt: "ホーム")
+          span ホーム
+        .lesson-title class="lesson#{@lesson.number}" Lesson #{@lesson.number}
+        p #{@lesson.title}
+        p.header-wrapper__detail 出席番号: #{@current_student.number}
+        p.header-wrapper__detail #{@current_student.nickname}
+        - if current_page? lesson_stage_path(lesson_number: 5, number: 2)
+          = link_to "キーワードを設定する", keywords_path, class: "header-button"
+      .stage-list
+        .stage
+          p ステージ
+          p 全#{@lesson.stages.count}面
+        .stage-num
+          - @lesson.stages.each do |stage|
+            = link_to stage.number, lesson_stage_path(@lesson, number: stage.number), \
+              class: "#{@workspaces[stage.id] ? "lesson-submitted" : "lesson-unsubmitted"} #{'lesson-current-page' if current_page? lesson_stage_path(@lesson, number: stage.number)}"

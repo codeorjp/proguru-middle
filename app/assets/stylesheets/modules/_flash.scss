@@ -1,0 +1,34 @@
+#flash {
+  & > div {
+    width: 100%;
+    color: #fff;
+    background: #5b99e4;
+    position: fixed;
+    text-align: center;
+    top: -100px;
+    animation-name: flashMessage;
+    animation-duration: 4s;
+    padding: 20px 0;
+  }
+  #alert,#error {
+    background: rgb(225, 57, 57);
+  }
+  #success {
+    background: #2cd0e2;
+  }
+}
+
+@keyframes flashMessage {
+  0% {
+    top: -100px;
+  }
+  10% {
+    top: 0px;
+  }
+  90% {
+    top: 0px;
+  }
+  100% {
+    top: -100px;
+  }
+}

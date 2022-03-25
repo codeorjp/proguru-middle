@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lesson3 Stage2 build blocks -> eval code -> input text -> submit -> display content 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        style={null}
+      >
+        <div>
+          <div>
+            <p>
+              クラスのチャット
+            </p>
+          </div>
+        </div>
+        <div
+          className="undefined messageBoardContents"
+        >
+          <div>
+            <div
+              className="sendMessageArea"
+            >
+              <div>
+                <p>
+                  <span>
+                    12:00 AM
+                  </span>
+                  <span>
+                    出席番号：0
+                  </span>
+                  <span>
+                    生徒1
+                  </span>
+                </p>
+                <div
+                  style={null}
+                >
+                  <p>
+                    こんにちは
+                  </p>
+                </div>
+              </div>
+              <div
+                style={null}
+              >
+                <img
+                  alt=""
+                  src={null}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+            >
+              <button
+                onClick={[Function]}
+                type="button"
+              >
+                <input
+                  accept="image/jpeg"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "display": "none",
+                    }
+                  }
+                  type="file"
+                />
+                <i
+                  className="bi bi-image undefined"
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                    }
+                  }
+                />
+              </button>
+            </div>
+            <div>
+              <input
+                disabled={false}
+                onChange={[Function]}
+                style={null}
+                value=""
+              />
+            </div>
+            <div>
+              <button
+                disabled={false}
+                onClick={[Function]}
+                style={null}
+                type="button"
+              >
+                送信する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        プログラムを組んだら
+        <br />
+        「実行する」ボタンを押してね
+      </p>
+    </div>
+  </div>
+</div>
+`;

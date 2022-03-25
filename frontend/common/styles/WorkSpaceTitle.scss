@@ -1,0 +1,21 @@
+@import 'common/styles/variables.scss';
+.title {
+  font-size: $space-xl;
+  flex: 1;
+  line-height: 1.6;
+}
+.titleWrap {
+  display: flex;
+  align-items: center;
+}
+.titleThumb {
+  width: 100px;
+  margin-right: $space-l;
+}
+.stageNumber {
+  color: $gray-3;
+  font-size: $font-size-s;
+}
+.stageTask {
+  font-size: $font-size-m;
+}

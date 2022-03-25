@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta content="text/html" charset="UTF-8" http-equiv="Content-Type"
+    title プログル技術
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag "favicon.ico"
+    = stylesheet_link_tag params[:controller]
+    = javascript_include_tag "application"
+    = stylesheet_pack_tag "application"
+  body.sensei-admin
+    .wrapper
+      #flash
+        - flash.each do |key, value|
+          div id="#{key}"
+            = h value
+      = render "sensei/layouts/header"
+      .container
+        - if current_user.present?
+          = render "sensei/layouts/sideNavi"
+        = yield
+      = render "sensei/layouts/footer"

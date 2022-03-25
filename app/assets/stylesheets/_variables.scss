@@ -1,0 +1,66 @@
+// variables
+$main-color: #007feb;
+$light-blue: #f5faff;
+$accent-color: #ff9900;
+$accent-text-color: #c57b0a;
+$light-accent-color: #fff7ea;
+$gray-1: #dedede;
+$gray-2: #f5f5f5;
+$black-1: #2d2d2d;
+$black-2: #7b7b7b;
+$black-3: #b9b9b9;
+$bg-gray: #e9ebee;
+
+/* lesson color */
+$lesson-1-primary: #23b16a;
+$lesson-1-secondary: #def4e3;
+$lesson-2-primary: #007feb;
+$lesson-2-secondary: #ddefff;
+$lesson-3-primary: #ff2800;
+$lesson-3-secondary: #ffece8;
+$lesson-4-primary: #E86412;
+$lesson-4-secondary: #fce4a9;
+$lesson-5-primary: #6e2fc3;
+$lesson-5-secondary: #e8d6ff;
+
+
+/* lesson color */
+$lesson-1-primary: #23b16a;
+$lesson-1-primary-hover: #1a8d53;
+$lesson-1-secondary: #def4e3;
+$lesson-2-primary: #007feb;
+$lesson-2-primary-hover: #005fb3;
+$lesson-2-secondary: #ddefff;
+$lesson-3-primary: #ff2800;
+$lesson-3-primary-hover: #bf1d00;
+$lesson-3-secondary: #ffece8;
+$lesson-4-primary: #E86412;
+$lesson-4-primary-hover: #9d7205;
+$lesson-4-secondary: #fce4a9;
+$lesson-5-primary: #6e2fc3;
+$lesson-5-primary-hover: #4b1d87;
+$lesson-5-secondary: #e8d6ff;
+
+/* ↑ sensei配下のvariablesとまとめたかったが読み込めなかった */
+
+$primaryColors: (
+  1: $lesson-1-primary,
+  2: $lesson-2-primary,
+  3: $lesson-3-primary,
+  4: $lesson-4-primary,
+  5: $lesson-5-primary,
+);
+$secondaryColors: (
+  1: $lesson-1-secondary,
+  2: $lesson-2-secondary,
+  3: $lesson-3-secondary,
+  4: $lesson-4-secondary,
+  5: $lesson-5-secondary,
+);
+$hoverColors: (
+  1: $lesson-1-primary-hover,
+  2: $lesson-2-primary-hover,
+  3: $lesson-3-primary-hover,
+  4: $lesson-4-primary-hover,
+  5: $lesson-5-primary-hover,
+);

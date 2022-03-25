@@ -1,0 +1,9 @@
+.container__main
+  .container-inner.single-contents
+    .finish
+      .finish__text
+        p.finish__congratulation おめでとう！
+        p.finish__subtext レッスン#{@lesson.number}が終了しました
+      = image_tag("lesson_finish_bg.png", class: "", width: 714, alt: "おめでとう")
+      = link_to @current_student.present? ? lessons_path : root_path, class: "button button--primary"
+        span トップへ戻る

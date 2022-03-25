@@ -1,0 +1,43 @@
+@import 'common/styles/variables.scss';
+.bar {
+  width: 40px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  outline: none;
+  justify-content: center;
+  &:hover {
+    .centerBar, .barIcon {
+      background: $accent-color;
+      color: #fff;
+    }
+  }
+}
+
+.onMouseColor {
+  background: #ccc;
+}
+
+.centerBar {
+  width: 6px;
+  margin: 40px 10px;
+  border-radius: 100px;
+  background: $gray-2; 
+  display: flex;
+  align-items: center;
+  transition: all 0.1s linear;
+}
+
+.barIcon {
+  position: relative;
+  left: -8px;
+  padding: 4px;
+  background: $gray-2;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition: all 0.1s linear;
+}
+
+.barIconRotate {
+  transform: rotate(0deg);
+}

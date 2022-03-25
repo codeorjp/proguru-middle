@@ -1,0 +1,23 @@
+.container__main#sensei-class-page
+  .container-inner
+    div
+      h2.h2-title クラスの登録
+      .base-form
+        = form_with(model: [:sensei, @class_room], url: sensei_class_rooms_path, local: true) do |form|
+          = render partial: "layouts/validation_error_messages", locals: { model: @class_room }
+          .base-form__field
+            = form.label :school_year
+            .base-form__require 必須
+            = form.text_field :school_year
+            .base-form__unit 年度（※西暦）
+          .base-form__field
+            = form.label :name
+            .base-form__require 必須
+            = form.text_field :name
+          .base-form__field
+            = form.label :students_count
+            .base-form__require 必須
+            = form.number_field :students_count, in: 1..50, step: 1
+            .base-form__unit 人
+          .base-form__actions
+            = form.submit "登録する", class: "button button--primary"

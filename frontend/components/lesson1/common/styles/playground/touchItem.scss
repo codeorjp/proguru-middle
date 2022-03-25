@@ -1,0 +1,44 @@
+.touchItem {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.touchHoverItem {
+  border-radius: 1px;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: none;
+  transition: all 0.1s linear;
+
+  &:hover {
+    background: rgba(#439eff, 0.2);
+    box-shadow: 0px 0px 0px 4px rgba(#439eff, 0.2);
+  }
+}
+
+.isSelected {
+  box-shadow: 0px 0px 0px 4px rgba(#69ff43, 0.6);
+}
+
+.selectable {
+  animation: flash 4s linear infinite;
+  box-shadow: 0px 0px 0px 4px rgba(#439eff, 1.0);
+}
+
+@keyframes flash {
+  0%,100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+}

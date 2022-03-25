@@ -1,0 +1,19 @@
+.container__main
+  .container-inner
+    div
+      h2.h2-title
+        .h2-title__text.class-item
+          .class-item__title
+            p.class-item__year = t("views.shared.class_year", year: @class_room.school_year)
+            p.class-item__name = "#{@class_room.name}のチャット"
+    div
+      .app-tab
+        - @class_room.message_boards.each do |message_board|
+          = link_to t("activerecord.attributes.message_board.kind.#{message_board.kind}"), sensei_message_board_path(message_board), class: "#{'active' if current_page? sensei_message_board_path(message_board)}"
+      h3
+        | #{t("activerecord.attributes.message_board.kind.#{@message_board.kind}")}で送ったメッセージ
+      #root
+        = javascript_pack_tag "application"
+        = react_component "sensei/message_boards/App",
+          classRoomId: @class_room.id,
+          kind: @message_board.kind

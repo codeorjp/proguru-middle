@@ -1,0 +1,35 @@
+.top
+  .top__header
+    .header__wrap
+      .header__title
+        .header__dots
+          = image_tag("dots.png", class: "", width: 60, alt: "レッスン")
+        p Let’s make a class message board !
+        h1 クラスのチャットを作ろう！
+      .header__image
+        = image_tag("header_bg.png", class: "", width: 800, alt: "チャットをつくろう")
+  .top__lesson
+    - [1, 3, 4].each do |lesson|
+        .top__card
+          .card__innerWrap
+            .title__leftArea
+              .card__titleArea
+                .title__bgNum class="lesson#{lesson}" #{lesson}
+                .title__detail
+                  .title__num class="lesson#{lesson}" Lesson #{lesson}
+                  .title__name
+                    - case lesson
+                    - when 1
+                      #text チャット画面をデザインしよう！
+                      p Design a message board!
+                    - when 3
+                      #text 文字を送受信しよう
+                      p Let's send and receive characters!
+                    - when 4
+                      #text 画像を送受信しよう！
+                      p Let's send and receive images!
+            .card__illust
+              = image_tag("lesson_#{lesson}.png", class: "", width: 212, alt: "レッスン#{1}")
+          .card__bottomArea
+            .bottomArea__btns
+              = link_to "お試しレッスンを始める", trial_path(lesson), class: "bottomArea__subBtn lesson#{lesson}"

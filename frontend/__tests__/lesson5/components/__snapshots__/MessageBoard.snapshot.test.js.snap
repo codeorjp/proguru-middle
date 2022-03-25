@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        style={null}
+      >
+        <div>
+          <div>
+            <p>
+              クラスのチャット
+            </p>
+          </div>
+        </div>
+        <div
+          className="undefined messageBoardContents"
+        >
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="button"
+            >
+              もっと見る
+            </button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
+            >
+              <button
+                onClick={[Function]}
+                type="button"
+              >
+                <input
+                  accept="image/jpeg"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "display": "none",
+                    }
+                  }
+                  type="file"
+                />
+                <i
+                  className="bi bi-image undefined"
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                    }
+                  }
+                />
+              </button>
+            </div>
+            <div>
+              <input
+                disabled={false}
+                onChange={[Function]}
+                style={null}
+                value=""
+              />
+            </div>
+            <div>
+              <button
+                disabled={false}
+                onClick={[Function]}
+                style={null}
+                type="button"
+              >
+                送信する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        プログラムを組んだら
+        <br />
+        「実行する」ボタンを押してね
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`with messages 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        style={null}
+      >
+        <div>
+          <div>
+            <p>
+              クラスのチャット
+            </p>
+          </div>
+        </div>
+        <div
+          className="undefined messageBoardContents"
+        >
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="button"
+            >
+              もっと見る
+            </button>
+          </div>
+          <div>
+            <div
+              className="sendMessageArea"
+            >
+              <div>
+                <p>
+                  <span>
+                    9:51 PM
+                  </span>
+                  <span>
+                    出席番号：1
+                  </span>
+                  <span>
+                    hogehoge
+                  </span>
+                </p>
+                <div
+                  style={null}
+                >
+                  <p>
+                    test
+                  </p>
+                </div>
+              </div>
+              <div
+                style={null}
+              >
+                <img
+                  alt=""
+                  src="iconurl"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="sendMessageArea"
+            >
+              <div>
+                <p>
+                  <span>
+                    9:51 PM
+                  </span>
+                  <span>
+                    出席番号：1
+                  </span>
+                  <span>
+                    hogehoge
+                  </span>
+                </p>
+                <div
+                  aria-describedby="popup-1"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "height": "0px",
+                    }
+                  }
+                >
+                  <img
+                    alt=""
+                    src="test"
+                  />
+                </div>
+              </div>
+              <div
+                style={null}
+              >
+                <img
+                  alt=""
+                  src="iconurl"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="sendMessageArea"
+            >
+              <div
+                style={null}
+              >
+                <img
+                  alt=""
+                  src="iconurl"
+                />
+              </div>
+              <div>
+                <p>
+                  <span>
+                    出席番号：1
+                  </span>
+                  <span>
+                    hogehoge
+                  </span>
+                  <span>
+                    9:51 PM
+                  </span>
+                </p>
+                <div
+                  style={null}
+                >
+                  <p>
+                    test
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className="sendMessageArea"
+            >
+              <div
+                style={null}
+              >
+                <img
+                  alt=""
+                  src="iconurl"
+                />
+              </div>
+              <div>
+                <p>
+                  <span>
+                    出席番号：1
+                  </span>
+                  <span>
+                    hogehoge
+                  </span>
+                  <span>
+                    9:51 PM
+                  </span>
+                </p>
+                <div
+                  aria-describedby="popup-2"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "height": "0px",
+                    }
+                  }
+                >
+                  <img
+                    alt=""
+                    src="test"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
+            >
+              <button
+                onClick={[Function]}
+                type="button"
+              >
+                <input
+                  accept="image/jpeg"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "display": "none",
+                    }
+                  }
+                  type="file"
+                />
+                <i
+                  className="bi bi-image undefined"
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                    }
+                  }
+                />
+              </button>
+            </div>
+            <div>
+              <input
+                disabled={false}
+                onChange={[Function]}
+                style={null}
+                value=""
+              />
+            </div>
+            <div>
+              <button
+                disabled={false}
+                onClick={[Function]}
+                style={null}
+                type="button"
+              >
+                送信する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        プログラムを組んだら
+        <br />
+        「実行する」ボタンを押してね
+      </p>
+    </div>
+  </div>
+</div>
+`;

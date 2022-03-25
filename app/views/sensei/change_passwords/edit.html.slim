@@ -1,0 +1,42 @@
+.container__main
+  .container-inner.single-contents
+    h2.h2-title パスワードの再設定
+    .password__description
+      ul
+        li 半角の英字 (a~z, A~Z) や数字 (0~9) ，記号 (!, ?, & など) が使用できます
+        li 半角の英字・数字・記号の中から2種類以上を組み合わせて8文字以上のパスワードを設定してください
+    .base-form
+      = form_with(model: @form, url: sensei_change_password_path, method: :patch, local: true) do |form|
+        = render partial: "layouts/validation_error_messages", locals: { model: @form }
+        .base-form__field
+          = form.label :current_password
+          = form.password_field :current_password
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="current_password_display")
+        .base-form__field
+          = form.label :new_password
+          = form.password_field :new_password
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="new_password_display")
+        .base-form__field
+          = form.label :new_password_confirmation
+          = form.password_field :new_password_confirmation
+          p.base-form__password-visibility
+            | パスワードを表示する
+            input(type="checkbox" id="new_confirm_password_display")
+        .submit-field
+          = form.submit "パスワードを変更する", class: "button button--primary"
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "current_password_display", \
+    password_form_id: "sensei_change_password_form_current_password" \
+  }
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "new_password_display", \
+    password_form_id: "sensei_change_password_form_new_password" \
+  }
+= render partial: "layouts/toggle_password_visibility_script", locals: { \
+    checkbox_id: "new_confirm_password_display", \
+    password_form_id: "sensei_change_password_form_new_password_confirmation" \
+  }
